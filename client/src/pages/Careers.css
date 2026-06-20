@@ -1,0 +1,364 @@
+.careers-page {
+  background-color: #0A0A0A;
+  min-height: 100vh;
+}
+
+.page-header {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.page-header .tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(223, 255, 0, 0.1);
+  color: #DFFF00;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.page-header__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 72px;
+  color: #F5F5F5;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.page-header__subtitle {
+  font-size: 18px;
+  color: #A3A3A3;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-header__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 56px;
+  color: #F5F5F5;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.section-header__subtitle {
+  font-size: 18px;
+  color: #A3A3A3;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Culture Grid */
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.culture-card {
+  background-color: #1A1A1A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.culture-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.culture-card__icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.culture-card__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 24px;
+  color: #F5F5F5;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.culture-card__text {
+  font-size: 14px;
+  color: #A3A3A3;
+  line-height: 1.6;
+}
+
+/* Positions List */
+.positions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.position-card {
+  background-color: #1A1A1A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.position-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.position-card.expanded {
+  border-color: rgba(223, 255, 0, 0.3);
+}
+
+.position-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px;
+}
+
+.position-card__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 24px;
+  color: #F5F5F5;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.position-card__meta {
+  display: flex;
+  gap: 16px;
+}
+
+.position-card__department,
+.position-card__location,
+.position-card__type {
+  font-size: 13px;
+  color: #A3A3A3;
+  padding: 4px 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+}
+
+.position-card__arrow {
+  font-size: 24px;
+  color: #DFFF00;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.position-card__details {
+  padding: 0 32px 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.position-card__description {
+  font-size: 15px;
+  color: #A3A3A3;
+  line-height: 1.7;
+  padding-top: 24px;
+  margin-bottom: 24px;
+}
+
+.position-card__requirements h4 {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 18px;
+  color: #F5F5F5;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.position-card__requirements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.position-card__requirements li {
+  font-size: 14px;
+  color: #A3A3A3;
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.position-card__requirements li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #DFFF00;
+}
+
+/* Apply CTA */
+.apply-cta {
+  padding-top: 0;
+}
+
+.cta-box {
+  background-color: #1A1A1A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.cta-box__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 48px;
+  color: #F5F5F5;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.cta-box__text {
+  font-size: 18px;
+  color: #A3A3A3;
+  max-width: 500px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: #DFFF00;
+  color: #0A0A0A;
+}
+
+.btn--primary:hover {
+  background-color: #B8FF3B;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(223, 255, 0, 0.3);
+}
+
+.btn--large {
+  padding: 18px 36px;
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .page-header__title {
+    font-size: 56px;
+  }
+
+  .section-header__title {
+    font-size: 48px;
+  }
+
+  .culture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .cta-box__title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .page-header__title {
+    font-size: 48px;
+  }
+
+  .section-header__title {
+    font-size: 40px;
+  }
+
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .position-card__header {
+    padding: 20px 24px;
+  }
+
+  .position-card__title {
+    font-size: 20px;
+  }
+
+  .position-card__meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .position-card__details {
+    padding: 0 24px 24px;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .cta-box {
+    padding: 60px 24px;
+  }
+
+  .cta-box__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header__title {
+    font-size: 40px;
+  }
+
+  .section-header__title {
+    font-size: 32px;
+  }
+
+  .position-card__title {
+    font-size: 18px;
+  }
+}
