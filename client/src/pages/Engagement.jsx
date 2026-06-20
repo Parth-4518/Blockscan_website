@@ -7,7 +7,7 @@ import CTASection from '../components/CTASection';
 import {
   Code, Globe, Handshake, Users, ArrowRight, MessageSquare,
   Calendar, Bell,
-  BookOpen, Zap, FileCode, ExternalLink, Layers, Radio
+  BookOpen, Zap, FileCode, ExternalLink, Layers, Radio, MessageCircle
 } from 'lucide-react';
 import './Engagement.css';
 
@@ -55,7 +55,7 @@ const devResources = [
     description: "CLI tools, SDKs, and testing environments to accelerate blockchain development."
   },
   {
-    icon: Github,
+    icon: Code,
     title: "Open Source",
     description: "Contribute to Blockscan open source projects and collaborate with the community."
   }
