@@ -9,8 +9,9 @@ function Footer() {
           <div className="footer__brand-section">
             <div className="footer__brand">BLOCK<span>SCAN</span></div>
             <p className="footer__description">
-              The fastest growing Blockchain Explorer, Search, API and Analytics Platform. 
-              Built for the EVM ecosystem with the mission of providing equitable access to blockchain data.
+              OpenScanAI is the fastest growing Blockchain Explorer, Search, API and Analytics Platform. 
+              Built for the EVM ecosystem with the mission of providing equitable access to blockchain data. 
+              Headquartered in Mumbai, Maharashtra, India.
             </p>
           </div>
           

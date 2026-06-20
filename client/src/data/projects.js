@@ -1,58 +1,44 @@
 const projects = [
   {
     id: 1,
-    title: "Blockscan Explorer",
-    description: "Real-time blockchain explorer for EVM chains with advanced search, transaction tracking, and smart contract verification.",
+    title: "XDCScan Explorer",
+    description: "Official blockchain explorer for XDC Network. Explore transactions, decode smart contract interactions, and visualize blockchain activity with clarity. Features AI-powered search, real-time gas tracking, and comprehensive analytics.",
     category: "Explorer",
-    tech: "React · Node.js · Web3",
+    tech: "React · Node.js · Web3 · AI Search",
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
-    featured: true
-  },
-  {
-    id: 2,
-    title: "OpenScan API",
-    description: "High-performance REST and GraphQL APIs providing equitable access to blockchain data for developers.",
-    category: "API",
-    tech: "GraphQL · PostgreSQL · Redis",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
-    featured: true
-  },
-  {
-    id: 3,
-    title: "Chain Analytics",
-    description: "Comprehensive analytics platform for on-chain data visualization, network health monitoring, and market insights.",
-    category: "Analytics",
-    tech: "D3.js · Python · BigQuery",
-    image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&q=80",
-    featured: false
-  },
-  {
-    id: 4,
-    title: "Smart Contract Verifier",
-    description: "Automated verification system for smart contracts with source code validation and security analysis.",
-    category: "Security",
-    tech: "Solidity · Rust · Docker",
-    image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&q=80",
-    featured: false
+    featured: true,
+    link: "https://xdcscan.io"
   },
   {
     id: 5,
-    title: "Wallet Tracker",
-    description: "Multi-chain wallet tracking and portfolio management with real-time alerts and transaction history.",
-    category: "Wallet",
-    tech: "TypeScript · Ethers.js · MongoDB",
-    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80",
-    featured: false
+    title: "GCX (GoCloudX)",
+    description: "Cloud computing platform with crypto and Web3 integration. Deploy and manage virtual machines with wallet-based authentication, crypto payments alongside traditional gateways (Stripe, PayPal, Razorpay), KYC verification, and a full billing and subscription system. Features an admin panel, referral program, marketplace, and API key management for automation.",
+    category: "Cloud",
+    tech: "Next.js (App Router) · Fastify · Prisma · PostgreSQL · Web3 · WalletConnect",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+    featured: true,
+    link: "https://github.com/OpenScanAI/GCX"
   },
   {
-    id: 6,
-    title: "DeFi Dashboard",
-    description: "Unified DeFi dashboard for tracking liquidity pools, yield farming, and protocol analytics across chains.",
-    category: "DeFi",
-    tech: "React · TheGraph · Node.js",
-    image: "https://images.unsplash.com/photo-1622630998477-20aa696ecb05?w=800&q=80",
-    featured: false
-  }
+    id: 2,
+    title: "OpenScan AI",
+    description: "AI-powered blockchain analytics platform providing intelligent insights into on-chain data. Automated transaction analysis, smart contract decoding, and predictive analytics for EVM chains.",
+    category: "Analytics",
+    tech: "Python · TensorFlow · GraphQL · PostgreSQL",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
+    featured: true,
+    link: "https://openscan.ai"
+  },
+  {
+    id: 3,
+    title: "Levi",
+    description: "Open-source AI agent infrastructure forked from Paperclip. A comprehensive framework for building autonomous AI agents with skills, workflows, and multi-agent orchestration. Supports enterprise deployments with safety guards.",
+    category: "AI Infrastructure",
+    tech: "TypeScript · Node.js · Docker · CLI",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    featured: true,
+    link: "https://github.com/OpenScanAI/Levi"
+  },
 ];
 
 export default projects;

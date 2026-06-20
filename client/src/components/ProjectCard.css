@@ -98,3 +98,13 @@
 .project-card__link:hover {
   color: #B8FF3B;
 }
+
+.project-card__link--disabled {
+  color: #A3A3A3;
+  cursor: default;
+}
+
+.project-card__link--disabled:hover {
+  color: #A3A3A3;
+  text-decoration: none;
+}

@@ -6,7 +6,16 @@ export function useScrollAnimation(options = {}) {
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-    
+
+    // Check if element is already in viewport on mount (with small delay for DOM readiness)
+    setTimeout(() => {
+      const rect = element.getBoundingClientRect();
+      const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+      if (isInViewport) {
+        element.classList.add('visible');
+      }
+    }, 100);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -25,9 +34,9 @@ export function useScrollAnimation(options = {}) {
         rootMargin: options.rootMargin || '0px 0px -50px 0px',
       }
     );
-    
+
     observer.observe(element);
-    
+
     return () => observer.disconnect();
   }, [options.threshold, options.rootMargin, options.repeat]);
   

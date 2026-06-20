@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
 import './ProjectCard.css';
 
 function ProjectCard({ project }) {
+  const isExternal = project.link && project.link !== '#';
+  
   return (
     <div className="project-card">
       <div className="project-card__image-wrapper">
@@ -19,9 +20,20 @@ function ProjectCard({ project }) {
         <p className="project-card__description">{project.description}</p>
         <div className="project-card__meta">
           <span className="project-card__tech">{project.tech}</span>
-          <Link to={`/projects/${project.id}`} className="project-card__link">
-            View Project →
-          </Link>
+          {isExternal ? (
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="project-card__link"
+            >
+              View Project →
+            </a>
+          ) : (
+            <span className="project-card__link project-card__link--disabled">
+              Coming Soon
+            </span>
+          )}
         </div>
       </div>
     </div>
