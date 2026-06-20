@@ -9,6 +9,7 @@ function Navbar() {
     { path: '/projects', label: 'Projects' },
     { path: '/blogs', label: 'Blogs' },
     { path: '/careers', label: 'Careers' },
+    { path: '/engagement', label: 'Engagement' },
     { path: '/contact', label: 'Contact' },
   ];
 

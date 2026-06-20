@@ -1,28 +1,68 @@
 import { useState } from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Contact.css';
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [errors, setErrors] = useState({});
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const headerRef = useScrollAnimation();
+  const contentRef = useScrollAnimation();
 
-  const handleSubmit = (e) => {
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email';
+    }
+    if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
+    if (!formData.message.trim()) newErrors.message = 'Message is required';
+    if (formData.message.trim().length < 10) newErrors.message = 'Message must be at least 10 characters';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    if (!validate()) return;
+
+    setSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setErrors({});
+        setTimeout(() => setSubmitted(false), 6000);
+      } else {
+        setErrors({ submit: 'Failed to send message. Please try again.' });
+      }
+    } catch (err) {
+      setErrors({ submit: 'Network error. Please try again later.' });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (errors[e.target.name]) {
+      setErrors({ ...errors, [e.target.name]: '' });
+    }
   };
 
   return (
     <div className="contact-page">
       {/* Page Header */}
-      <section className="page-header">
+      <section className="page-header" ref={headerRef}>
         <div className="container">
           <span className="tag">Get in Touch</span>
           <h1 className="page-header__title">Contact Us</h1>
@@ -32,16 +72,16 @@ function Contact() {
         </div>
       </section>
 
-      <section className="contact-content section">
+      <section className="contact-content section" ref={contentRef}>
         <div className="container">
           <div className="contact-grid">
             {/* Contact Information */}
-            <div className="contact-info">
+            <div className="contact-info fade-in-left">
               <h2 className="contact-info__title">Let's Talk</h2>
               <p className="contact-info__text">
                 Whether you're interested in our API, have a partnership proposal, or just want to say hello — we're here.
               </p>
-              
+
               <div className="contact-info__items">
                 <div className="contact-info__item">
                   <div className="contact-info__icon">
@@ -55,7 +95,7 @@ function Contact() {
                     <p>hello@blockscan.io</p>
                   </div>
                 </div>
-                
+
                 <div className="contact-info__item">
                   <div className="contact-info__icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -68,7 +108,7 @@ function Contact() {
                     <p>Remote-first, Worldwide</p>
                   </div>
                 </div>
-                
+
                 <div className="contact-info__item">
                   <div className="contact-info__icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -114,68 +154,83 @@ function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="contact-form-wrapper">
-              <form className="contact-form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="name" className="form-label">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                    placeholder="Your name"
-                  />
+            <div className="contact-form-wrapper fade-in-right">
+              {submitted ? (
+                <div className="form-success" style={{ padding: '40px', textAlign: 'center' }}>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#DFFF00" strokeWidth="2" style={{ marginBottom: '16px' }}>
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                  <h3 style={{ fontFamily: 'Bebas Neue, Anton, sans-serif', fontSize: '28px', color: '#F5F5F5', marginBottom: '8px' }}>Message Sent!</h3>
+                  <p style={{ color: '#A3A3A3' }}>Thank you for reaching out. We'll get back to you within 24 hours.</p>
                 </div>
-                
-                <div className="form-group">
-                  <label htmlFor="email" className="form-label">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="subject" className="form-label">Subject</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                    placeholder="How can we help?"
-                  />
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="message" className="form-label">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows="5"
-                    className="form-textarea"
-                    placeholder="Tell us more about your project or question..."
-                  />
-                </div>
-                
-                <button type="submit" className="btn btn--primary btn--large">
-                  Send Message
-                </button>
-              </form>
+              ) : (
+                <form className="contact-form" onSubmit={handleSubmit} noValidate>
+                  {errors.submit && <div className="form-error" style={{ marginBottom: '16px', padding: '12px', backgroundColor: 'rgba(255,68,68,0.1)', borderRadius: '8px' }}>{errors.submit}</div>}
+
+                  <div className="form-group">
+                    <label htmlFor="name" className="form-label">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`form-input ${errors.name ? 'error' : ''}`}
+                      placeholder="Your name"
+                      autoComplete="name"
+                    />
+                    {errors.name && <div className="form-error">{errors.name}</div>}
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="email" className="form-label">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`form-input ${errors.email ? 'error' : ''}`}
+                      placeholder="your@email.com"
+                      autoComplete="email"
+                    />
+                    {errors.email && <div className="form-error">{errors.email}</div>}
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="subject" className="form-label">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      className={`form-input ${errors.subject ? 'error' : ''}`}
+                      placeholder="How can we help?"
+                    />
+                    {errors.subject && <div className="form-error">{errors.subject}</div>}
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="message" className="form-label">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows="5"
+                      className={`form-textarea ${errors.message ? 'error' : ''}`}
+                      placeholder="Tell us more about your project or question..."
+                    />
+                    {errors.message && <div className="form-error">{errors.message}</div>}
+                  </div>
+
+                  <button type="submit" className={`btn btn--primary btn--large ${submitting ? 'btn-loading' : ''}`} disabled={submitting}>
+                    {submitting ? 'Sending...' : 'Send Message'}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>
