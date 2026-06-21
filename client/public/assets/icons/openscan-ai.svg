@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- OpenScan AI: Neural Block Matrix -->
+  <defs>
+    <style>
+      .primary { stroke: #DFFF00; }
+      .secondary { stroke: rgba(223, 255, 0, 0.35); }
+      .tertiary { stroke: rgba(223, 255, 0, 0.12); }
+    </style>
+  </defs>
+  
+  <!-- Central block core -->
+  <rect x="52" y="52" width="16" height="16" rx="2" class="primary" fill="rgba(223,255,0,0.1)"/>
+  <circle cx="60" cy="60" r="3" class="primary" fill="#DFFF00"/>
+  
+  <!-- Inner ring block nodes -->
+  <rect x="56" y="32" width="8" height="8" rx="1" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="80" y="44" width="8" height="8" rx="1" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="80" y="68" width="8" height="8" rx="1" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="56" y="80" width="8" height="8" rx="1" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="32" y="68" width="8" height="8" rx="1" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="32" y="44" width="8" height="8" rx="1" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  
+  <!-- Outer ring nodes -->
+  <rect x="56" y="12" width="8" height="8" rx="1" class="tertiary" fill="rgba(223,255,0,0.03)"/>
+  <rect x="96" y="36" width="8" height="8" rx="1" class="tertiary" fill="rgba(223,255,0,0.03)"/>
+  <rect x="96" y="76" width="8" height="8" rx="1" class="tertiary" fill="rgba(223,255,0,0.03)"/>
+  <rect x="56" y="100" width="8" height="8" rx="1" class="tertiary" fill="rgba(223,255,0,0.03)"/>
+  <rect x="16" y="76" width="8" height="8" rx="1" class="tertiary" fill="rgba(223,255,0,0.03)"/>
+  <rect x="16" y="36" width="8" height="8" rx="1" class="tertiary" fill="rgba(223,255,0,0.03)"/>
+  
+  <!-- Inner connections -->
+  <line x1="60" y1="52" x2="60" y2="40" class="secondary"/>
+  <line x1="68" y1="56" x2="80" y2="48" class="secondary"/>
+  <line x1="68" y1="64" x2="80" y2="72" class="secondary"/>
+  <line x1="60" y1="68" x2="60" y2="80" class="secondary"/>
+  <line x1="52" y1="64" x2="40" y2="72" class="secondary"/>
+  <line x1="52" y1="56" x2="40" y2="48" class="secondary"/>
+  
+  <!-- Outer connections -->
+  <line x1="60" y1="40" x2="60" y2="20" class="tertiary"/>
+  <line x1="80" y1="48" x2="100" y2="40" class="tertiary"/>
+  <line x1="80" y1="72" x2="100" y2="80" class="tertiary"/>
+  <line x1="60" y1="80" x2="60" y2="100" class="tertiary"/>
+  <line x1="40" y1="72" x2="20" y2="80" class="tertiary"/>
+  <line x1="40" y1="48" x2="20" y2="40" class="tertiary"/>
+  
+  <!-- Cross connections -->
+  <line x1="60" y1="40" x2="80" y2="48" class="tertiary" stroke-dasharray="2 4"/>
+  <line x1="80" y1="48" x2="80" y2="72" class="tertiary" stroke-dasharray="2 4"/>
+  <line x1="80" y1="72" x2="60" y2="80" class="tertiary" stroke-dasharray="2 4"/>
+  <line x1="60" y1="80" x2="40" y2="72" class="tertiary" stroke-dasharray="2 4"/>
+  <line x1="40" y1="72" x2="40" y2="48" class="tertiary" stroke-dasharray="2 4"/>
+  <line x1="40" y1="48" x2="60" y2="40" class="tertiary" stroke-dasharray="2 4"/>
+</svg>

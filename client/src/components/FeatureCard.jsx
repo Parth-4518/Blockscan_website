@@ -1,15 +1,13 @@
-import React from 'react';
-
 const FeatureCard = ({ icon: Icon, title, description }) => {
   return (
-    <div className="bg-[#1A1A1A] border border-white/10 rounded-xl p-6 hover:border-white/20 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300 group">
-      <div className="w-14 h-14 mb-4 bg-[#DFFF00]/10 rounded-xl flex items-center justify-center group-hover:bg-[#DFFF00]/20 transition-colors">
-        <Icon size={28} className="text-[#DFFF00]" />
+    <div className="bg-[#111827] border border-white/5 rounded-xl p-6 hover:border-[rgba(43,240,255,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:-translate-y-1 transition-all duration-300 group">
+      <div className="w-14 h-14 mb-4 bg-[#2BF0FF]/10 rounded-xl flex items-center justify-center group-hover:bg-[#2BF0FF]/20 transition-colors">
+        <Icon size={28} className="text-[#2BF0FF]" />
       </div>
-      <h3 className="text-lg font-bold text-[#F5F5F5] font-['Bebas_Neue',sans-serif] tracking-wide mb-2">
+      <h3 className="text-lg font-bold text-[#FFFFFF] font-['Space_Grotesk',sans-serif] tracking-wide mb-2">
         {title}
       </h3>
-      <p className="text-[#A3A3A3] text-sm leading-relaxed">
+      <p className="text-[#B6C2D9] text-sm leading-relaxed">
         {description}
       </p>
     </div>

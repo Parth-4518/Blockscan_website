@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFFF00" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#DFFF00" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0A0A0A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.08">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="500" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="500" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="500" stroke="#DFFF00" stroke-width="0.5"/>
+  </g>
+
+  <!-- Brain outline -->
+  <path d="M 400 120 
+           C 340 120, 300 160, 300 220
+           C 300 260, 320 290, 340 310
+           C 320 330, 310 360, 320 390
+           C 330 420, 360 430, 400 430
+           C 440 430, 470 420, 480 390
+           C 490 360, 480 330, 460 310
+           C 480 290, 500 260, 500 220
+           C 500 160, 460 120, 400 120 Z" 
+        fill="none" stroke="#DFFF00" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Brain hemispheres divider -->
+  <path d="M 400 120 Q 395 200 400 280 Q 405 360 400 430" 
+        fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+
+  <!-- Neural network nodes -->
+  <!-- Left hemisphere nodes -->
+  <circle cx="340" cy="180" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="360" cy="220" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="330" cy="260" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="350" cy="300" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="370" cy="340" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="345" cy="380" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+
+  <!-- Right hemisphere nodes -->
+  <circle cx="460" cy="180" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="440" cy="220" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="470" cy="260" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="450" cy="300" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="430" cy="340" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+  <circle cx="455" cy="380" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2"/>
+
+  <!-- Center nodes -->
+  <circle cx="400" cy="200" r="5" fill="none" stroke="#DFFF00" stroke-width="1.5"/>
+  <circle cx="400" cy="260" r="5" fill="none" stroke="#DFFF00" stroke-width="1.5"/>
+  <circle cx="400" cy="320" r="5" fill="none" stroke="#DFFF00" stroke-width="1.5"/>
+  <circle cx="400" cy="380" r="5" fill="none" stroke="#DFFF00" stroke-width="1.5"/>
+
+  <!-- Neural connections -->
+  <!-- Left connections -->
+  <line x1="340" y1="180" x2="360" y2="220" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="360" y1="220" x2="330" y2="260" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="330" y1="260" x2="350" y2="300" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="350" y1="300" x2="370" y2="340" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="370" y1="340" x2="345" y2="380" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="340" y1="180" x2="330" y2="260" stroke="#DFFF00" stroke-width="0.8" opacity="0.3"/>
+  <line x1="360" y1="220" x2="350" y2="300" stroke="#DFFF00" stroke-width="0.8" opacity="0.3"/>
+  <line x1="350" y1="300" x2="345" y2="380" stroke="#DFFF00" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Right connections -->
+  <line x1="460" y1="180" x2="440" y2="220" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="440" y1="220" x2="470" y2="260" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="470" y1="260" x2="450" y2="300" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="450" y1="300" x2="430" y2="340" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="430" y1="340" x2="455" y2="380" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="460" y1="180" x2="470" y2="260" stroke="#DFFF00" stroke-width="0.8" opacity="0.3"/>
+  <line x1="440" y1="220" x2="450" y2="300" stroke="#DFFF00" stroke-width="0.8" opacity="0.3"/>
+  <line x1="450" y1="300" x2="455" y2="380" stroke="#DFFF00" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Cross-hemisphere connections -->
+  <line x1="360" y1="220" x2="440" y2="220" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+  <line x1="350" y1="300" x2="450" y2="300" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+  <line x1="370" y1="340" x2="430" y2="340" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Center to sides -->
+  <line x1="400" y1="200" x2="360" y2="220" stroke="#DFFF00" stroke-width="0.8" opacity="0.6"/>
+  <line x1="400" y1="200" x2="440" y2="220" stroke="#DFFF00" stroke-width="0.8" opacity="0.6"/>
+  <line x1="400" y1="260" x2="350" y2="300" stroke="#DFFF00" stroke-width="0.8" opacity="0.6"/>
+  <line x1="400" y1="260" x2="450" y2="300" stroke="#DFFF00" stroke-width="0.8" opacity="0.6"/>
+  <line x1="400" y1="320" x2="370" y2="340" stroke="#DFFF00" stroke-width="0.8" opacity="0.6"/>
+  <line x1="400" y1="320" x2="430" y2="340" stroke="#DFFF00" stroke-width="0.8" opacity="0.6"/>
+  <line x1="400" y1="380" x2="345" y2="380" stroke="#DFFF00" stroke-width="0.8" opacity="0.6"/>
+  <line x1="400" y1="380" x2="455" y2="380" stroke="#DFFF00" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Data scan lines -->
+  <line x1="150" y1="200" x2="280" y2="200" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="8 4"/>
+  <line x1="150" y1="260" x2="280" y2="260" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="8 4"/>
+  <line x1="150" y1="320" x2="280" y2="320" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="8 4"/>
+
+  <line x1="520" y1="180" x2="650" y2="180" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="8 4"/>
+  <line x1="520" y1="240" x2="650" y2="240" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="8 4"/>
+  <line x1="520" y1="300" x2="650" y2="300" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="8 4"/>
+
+  <!-- Corner brackets -->
+  <path d="M 280 140 L 280 120 L 300 120" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+  <path d="M 500 120 L 520 120 L 520 140" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+  <path d="M 280 380 L 280 400 L 300 400" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+  <path d="M 500 400 L 520 400 L 520 380" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+
+  <!-- Outer frame -->
+  <rect x="100" y="80" width="600" height="340" fill="none" stroke="#DFFF00" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Small decorative dots -->
+  <circle cx="200" cy="150" r="2" fill="#DFFF00" opacity="0.3"/>
+  <circle cx="600" cy="350" r="2" fill="#DFFF00" opacity="0.3"/>
+  <circle cx="220" cy="360" r="1.5" fill="#DFFF00" opacity="0.2"/>
+  <circle cx="580" cy="160" r="1.5" fill="#DFFF00" opacity="0.2"/>
+
+  <!-- Scan line effect -->
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#DFFF00" stroke-width="0.3" opacity="0.08"/>
+</svg>

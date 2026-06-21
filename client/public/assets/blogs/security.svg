@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0a; }
+      .grid { stroke: rgba(223, 255, 0, 0.04); stroke-width: 0.5; }
+      .wire { fill: none; stroke: #DFFF00; stroke-width: 0.6; opacity: 0.2; }
+      .node { fill: #DFFF00; }
+      .text { font-family: 'IBM Plex Sans', monospace; font-size: 8px; fill: rgba(223, 255, 0, 0.1); letter-spacing: 0.2em; }
+    </style>
+    <pattern id="g" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" class="grid"/>
+    </pattern>
+    <radialGradient id="spot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#DFFF00" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#DFFF00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" class="bg"/>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect width="800" height="500" fill="url(#spot)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 30 30 L 30 60 L 60 60" class="wire" fill="none" opacity="0.3"/>
+  <path d="M 770 30 L 770 60 L 740 60" class="wire" fill="none" opacity="0.3"/>
+  <path d="M 30 470 L 30 440 L 60 440" class="wire" fill="none" opacity="0.3"/>
+  <path d="M 770 470 L 770 440 L 740 440" class="wire" fill="none" opacity="0.3"/>
+
+  <!-- ============================================
+       HERO: Shield + lock + security perimeter rings
+       ============================================ -->
+  <g transform="translate(400, 260) scale(11)">
+    <!-- Security perimeter rings -->
+    <circle cx="0" cy="0" r="16" class="wire" stroke-width="0.3" opacity="0.15"/>
+    <circle cx="0" cy="0" r="14" class="wire" stroke-width="0.3" opacity="0.2"/>
+    <circle cx="0" cy="0" r="12" class="wire" stroke-width="0.3" opacity="0.25"/>
+
+    <!-- Shield outline -->
+    <path d="M0 -10 L 8 -6 L 8 2 Q 8 8 0 12 Q -8 8 -8 2 L -8 -6 Z" class="wire" stroke-width="0.5" fill="none"/>
+
+    <!-- Shield inner detail -->
+    <path d="M0 -8 L 6 -5 L 6 2 Q 6 7 0 10 Q -6 7 -6 2 L -6 -5 Z" class="wire" stroke-width="0.3" opacity="0.4" fill="none"/>
+
+    <!-- Lock body -->
+    <rect x="-3" y="-2" width="6" height="5" class="wire" rx="0.5" stroke-width="0.4"/>
+
+    <!-- Lock shackle -->
+    <path d="M-2 -2 L -2 -4 Q -2 -6 0 -6 Q 2 -6 2 -4 L 2 -2" class="wire" stroke-width="0.4" fill="none"/>
+
+    <!-- Keyhole -->
+    <circle cx="0" cy="0.5" r="0.6" class="node" opacity="0.5"/>
+    <line x1="0" y1="1.1" x2="0" y2="2.5" class="wire" stroke-width="0.3" opacity="0.5"/>
+
+    <!-- Security status nodes -->
+    <circle cx="-10" cy="-8" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="10" cy="-8" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="0" cy="14" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="-10" cy="8" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="10" cy="8" r="0.3" class="node" opacity="0.4"/>
+
+    <!-- Perimeter connection lines -->
+    <line x1="-10" y1="-8" x2="0" y2="-12" class="wire" stroke-width="0.2" opacity="0.2"/>
+    <line x1="10" y1="-8" x2="0" y2="-12" class="wire" stroke-width="0.2" opacity="0.2"/>
+    <line x1="-10" y1="8" x2="0" y2="12" class="wire" stroke-width="0.2" opacity="0.2"/>
+    <line x1="10" y1="8" x2="0" y2="12" class="wire" stroke-width="0.2" opacity="0.2"/>
+  </g>
+
+  <text x="40" y="40" class="text">SECURITY AUDIT</text>
+  <text x="40" y="52" class="text">STATUS: VERIFIED</text>
+  <text x="600" y="465" class="text">SMART CONTRACTS</text>
+</svg>

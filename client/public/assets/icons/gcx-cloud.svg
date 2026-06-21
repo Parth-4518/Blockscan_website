@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- GCX Cloud: Distributed Block Architecture -->
+  <defs>
+    <style>
+      .primary { stroke: #DFFF00; }
+      .secondary { stroke: rgba(223, 255, 0, 0.35); }
+      .tertiary { stroke: rgba(223, 255, 0, 0.12); }
+    </style>
+  </defs>
+  
+  <!-- Central block hub -->
+  <rect x="52" y="52" width="16" height="16" rx="2" class="primary" fill="rgba(223,255,0,0.08)"/>
+  <rect x="56" y="56" width="8" height="8" rx="1" class="primary" fill="rgba(223,255,0,0.15)"/>
+  
+  <!-- Orbital block nodes -->
+  <rect x="54" y="18" width="12" height="12" rx="2" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="90" y="36" width="12" height="12" rx="2" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="90" y="72" width="12" height="12" rx="2" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="54" y="90" width="12" height="12" rx="2" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="18" y="72" width="12" height="12" rx="2" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  <rect x="18" y="36" width="12" height="12" rx="2" class="secondary" fill="rgba(223,255,0,0.05)"/>
+  
+  <!-- Connection lines -->
+  <line x1="60" y1="52" x2="60" y2="30" class="tertiary"/>
+  <line x1="68" y1="56" x2="90" y2="42" class="tertiary"/>
+  <line x1="68" y1="64" x2="90" y2="78" class="tertiary"/>
+  <line x1="60" y1="68" x2="60" y2="90" class="tertiary"/>
+  <line x1="52" y1="64" x2="30" y2="78" class="tertiary"/>
+  <line x1="52" y1="56" x2="30" y2="42" class="tertiary"/>
+  
+  <!-- Outer hexagonal frame -->
+  <path d="M60 8 L104 34 L104 86 L60 112 L16 86 L16 34 Z" class="tertiary" stroke-dasharray="4 4"/>
+  
+  <!-- Inner connections -->
+  <line x1="60" y1="30" x2="90" y2="42" class="tertiary" stroke-dasharray="2 3"/>
+  <line x1="90" y1="42" x2="90" y2="78" class="tertiary" stroke-dasharray="2 3"/>
+  <line x1="90" y1="78" x2="60" y2="90" class="tertiary" stroke-dasharray="2 3"/>
+  <line x1="60" y1="90" x2="30" y2="78" class="tertiary" stroke-dasharray="2 3"/>
+  <line x1="30" y1="78" x2="30" y2="42" class="tertiary" stroke-dasharray="2 3"/>
+  <line x1="30" y1="42" x2="60" y2="30" class="tertiary" stroke-dasharray="2 3"/>
+</svg>

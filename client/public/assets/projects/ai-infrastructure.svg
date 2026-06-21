@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0a; }
+      .grid-fine { stroke: rgba(184, 255, 59, 0.03); stroke-width: 0.3; }
+      .grid-coarse { stroke: rgba(184, 255, 59, 0.06); stroke-width: 0.5; }
+      .wire { fill: none; stroke: #B8FF3B; stroke-width: 0.6; opacity: 0.25; }
+      .wire-dim { fill: none; stroke: #B8FF3B; stroke-width: 0.4; opacity: 0.1; }
+      .node { fill: #B8FF3B; opacity: 0.5; }
+      .node-dim { fill: rgba(184, 255, 59, 0.2); }
+      .text { font-family: 'IBM Plex Sans', monospace; font-size: 8px; fill: rgba(184, 255, 59, 0.15); letter-spacing: 0.25em; }
+      .label { font-family: 'IBM Plex Sans', monospace; font-size: 7px; fill: rgba(255, 255, 255, 0.1); letter-spacing: 0.2em; }
+      .stamp { font-family: 'IBM Plex Sans', monospace; font-size: 10px; fill: rgba(184, 255, 59, 0.12); letter-spacing: 0.4em; font-weight: 700; }
+      .title-large { font-family: 'Bebas Neue', sans-serif; font-size: 72px; fill: rgba(255, 255, 255, 0.03); letter-spacing: 0.15em; }
+      .orbit { fill: none; stroke: #B8FF3B; stroke-width: 0.3; opacity: 0.12; }
+      .network-line { fill: none; stroke: #B8FF3B; stroke-width: 0.4; opacity: 0.15; }
+      .icon-stroke { fill: none; stroke: #B8FF3B; stroke-width: 0.7; opacity: 0.9; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    
+    <pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" class="grid-fine"/>
+    </pattern>
+    <pattern id="grid2" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M 120 0 L 0 0 0 120" class="grid-coarse"/>
+    </pattern>
+    
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B8FF3B" stop-opacity="0.03"/>
+      <stop offset="50%" stop-color="#B8FF3B" stop-opacity="0.01"/>
+      <stop offset="100%" stop-color="#B8FF3B" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="icon-spotlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B8FF3B" stop-opacity="0.15"/>
+      <stop offset="40%" stop-color="#B8FF3B" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#B8FF3B" stop-opacity="0"/>
+    </radialGradient>
+    
+    <linearGradient id="vignette" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" class="bg"/>
+  <rect width="800" height="500" fill="url(#grid1)"/>
+  <rect width="800" height="500" fill="url(#grid2)"/>
+  <rect width="800" height="500" fill="url(#glow1)"/>
+
+  <!-- Blueprint construction lines -->
+  <g opacity="0.06">
+    <line x1="0" y1="80" x2="800" y2="80" class="wire-dim"/>
+    <line x1="0" y1="200" x2="800" y2="200" class="wire-dim"/>
+    <line x1="0" y1="320" x2="800" y2="320" class="wire-dim"/>
+    <line x1="0" y1="440" x2="800" y2="440" class="wire-dim"/>
+    <line x1="150" y1="0" x2="150" y2="500" class="wire-dim"/>
+    <line x1="350" y1="0" x2="350" y2="500" class="wire-dim"/>
+    <line x1="550" y1="0" x2="550" y2="500" class="wire-dim"/>
+    <line x1="750" y1="0" x2="750" y2="500" class="wire-dim"/>
+  </g>
+
+  <!-- Dimension markers -->
+  <text x="40" y="35" class="text">AI BLOCKCHAIN ANALYTICS</text>
+  <text x="40" y="48" class="text">MODEL: GPT-4o</text>
+  <text x="620" y="35" class="text">LAT 37.7749 N</text>
+  <text x="620" y="48" class="text">LON 122.4194 W</text>
+
+  <!-- Large background watermark title -->
+  <text x="400" y="280" class="title-large" text-anchor="middle">OPENSCAN</text>
+
+  <!-- ============================================
+       HERO: Lucide Brain (centered, ~45%)
+       ============================================ -->
+  <g transform="translate(400, 260) scale(10)">
+    
+    <!-- Background spotlight behind icon -->
+    <ellipse cx="0" cy="0" rx="14" ry="14" fill="url(#icon-spotlight)" opacity="0.8"/>
+
+    <!-- One subtle accent ring -->
+    <ellipse cx="0" cy="0" rx="18" ry="6" class="orbit" transform="rotate(-15)"/>
+    
+    <!-- Lucide Brain icon -->
+    <g class="icon-stroke">
+      <path d="M0 8v-13"/>
+      <path d="M3 3a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/>
+      <path d="M5.598 0.5a3 3 0 1 0-5.598 0"/>
+      <path d="M5.997 -0.875a4 4 0 0 1 2.526 5.77"/>
+      <path d="M6 8a4 4 0 0 0 2-7.464"/>
+      <path d="M7.967 7.483a4 4 0 1 1-7.967-.517"/>
+    </g>
+    
+    <!-- Network nodes around brain -->
+    <circle cx="-7" cy="-4" r="0.3" class="node"/>
+    <circle cx="7" cy="-4" r="0.25" class="node-dim"/>
+    <circle cx="0" cy="8" r="0.3" class="node"/>
+    <circle cx="-5" cy="6" r="0.25" class="node-dim"/>
+    <circle cx="5" cy="6" r="0.25" class="node-dim"/>
+    <circle cx="-8" cy="2" r="0.25" class="node-dim"/>
+    <circle cx="8" cy="2" r="0.25" class="node-dim"/>
+    
+    <!-- Center hub -->
+    <circle cx="0" cy="0" r="0.4" class="node" opacity="0.8"/>
+  </g>
+
+  <!-- Scattered background data nodes -->
+  <circle cx="180" cy="140" r="2" class="node-dim"/>
+  <circle cx="320" cy="340" r="2.5" class="node"/>
+  <circle cx="720" cy="400" r="2" class="node-dim"/>
+  <circle cx="680" cy="110" r="2.5" class="node"/>
+  <circle cx="140" cy="420" r="2" class="node-dim"/>
+  <circle cx="280" cy="180" r="2.5" class="node"/>
+  <circle cx="650" cy="380" r="2" class="node-dim"/>
+
+  <!-- Connection lines -->
+  <line x1="400" y1="260" x2="320" y2="340" class="network-line" opacity="0.6"/>
+  <line x1="400" y1="260" x2="680" y2="110" class="network-line" opacity="0.6"/>
+  <line x1="400" y1="260" x2="180" y2="140" class="network-line" opacity="0.4"/>
+
+  <!-- Corner frame brackets -->
+  <path d="M 25 65 L 25 25 L 65 25" class="wire" fill="none"/>
+  <path d="M 775 65 L 775 25 L 735 25" class="wire" fill="none"/>
+  <path d="M 25 435 L 25 475 L 65 475" class="wire" fill="none"/>
+  <path d="M 775 435 L 775 475 L 735 475" class="wire" fill="none"/>
+
+  <!-- Micro labels -->
+  <text x="35" y="110" class="label">ARCHIVE</text>
+  <text x="35" y="122" class="label">ACTIVE</text>
+  <text x="730" y="110" class="label">BLOCKSCAN</text>
+  <text x="730" y="122" class="label">2026</text>
+  <text x="35" y="465" class="label">VHS</text>
+  <text x="710" y="465" class="label">DATA INDEX</text>
+
+  <!-- Stamp marks -->
+  <text x="35" y="445" class="stamp">BLK.003</text>
+  <text x="680" y="445" class="stamp">TYPE: AI</text>
+
+  <!-- Bottom edge wear line -->
+  <line x1="80" y1="485" x2="720" y2="485" stroke="rgba(184,255,59,0.05)" stroke-width="0.5"/>
+
+  <!-- Vignette overlay -->
+  <rect width="800" height="500" fill="url(#vignette)" pointer-events="none"/>
+</svg>

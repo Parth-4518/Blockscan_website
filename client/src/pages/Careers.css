@@ -13,8 +13,8 @@
 .careers-hero__bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(223, 255, 0, 0.08) 0%, transparent 50%),
-              radial-gradient(ellipse at 80% 50%, rgba(223, 255, 0, 0.04) 0%, transparent 40%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(223, 255, 0, 0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 50%, rgba(223, 255, 0, 0.03) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -24,9 +24,9 @@
 }
 
 .careers-hero__title {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 64px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   letter-spacing: 0.02em;
   line-height: 1.1;
   margin-bottom: 20px;
@@ -35,7 +35,7 @@
 
 .careers-hero__subtitle {
   font-size: 18px;
-  color: #A3A3A3;
+  color: #B6C2D9;
   line-height: 1.7;
   max-width: 600px;
   margin-bottom: 32px;
@@ -85,6 +85,56 @@
 .btn-secondary:hover {
   border-color: rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Statistics Row */
+.careers-stats {
+  padding: 0 0 60px;
+}
+
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 32px 40px;
+  background: linear-gradient(145deg, #111111 0%, #1A1A1A 100%);
+  border: 1px solid rgba(223, 255, 0, 0.08);
+  border-radius: 16px;
+}
+
+.stats-row__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 40px;
+}
+
+.stats-row__icon {
+  color: #DFFF00;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.stats-row__value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+}
+
+.stats-row__label {
+  font-size: 13px;
+  color: #A3A3A3;
+  letter-spacing: 0.05em;
+}
+
+.stats-row__divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(223, 255, 0, 0.1);
 }
 
 /* Sections */
@@ -161,6 +211,10 @@
   .careers-hero__title {
     font-size: 48px;
   }
+
+  .stats-row__item {
+    padding: 0 24px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -188,6 +242,21 @@
 
   .careers-cta__title {
     font-size: 24px;
+  }
+
+  .stats-row {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .stats-row__divider {
+    display: none;
+  }
+
+  .stats-row__item {
+    padding: 0;
+    min-width: 120px;
   }
 
   .btn {

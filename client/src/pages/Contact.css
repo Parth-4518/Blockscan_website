@@ -1,5 +1,5 @@
 .contact-page {
-  background-color: #0A0A0A;
+  background-color: #050816;
   min-height: 100vh;
 }
 
@@ -12,8 +12,8 @@
 .page-header .tag {
   display: inline-block;
   padding: 6px 16px;
-  background-color: rgba(223, 255, 0, 0.1);
-  color: #DFFF00;
+  background-color: rgba(43, 240, 255, 0.15);
+  color: #2BF0FF;
   border-radius: 9999px;
   font-size: 12px;
   font-weight: 600;
@@ -23,16 +23,16 @@
 }
 
 .page-header__title {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 72px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   margin-bottom: 16px;
   letter-spacing: 0.02em;
 }
 
 .page-header__subtitle {
   font-size: 18px;
-  color: #A3A3A3;
+  color: #B6C2D9;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.7;
@@ -62,16 +62,16 @@
 }
 
 .reason-card {
-  background-color: #111111;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #0A1024;
+  border: 1px solid rgba(43, 240, 255, 0.15);
   border-radius: 12px;
   padding: 32px 24px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reason-card:hover {
-  border-color: rgba(223, 255, 0, 0.3);
+  border-color: rgba(43, 240, 255, 0.015);
   transform: translateY(-4px);
 }
 
@@ -81,23 +81,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(223, 255, 0, 0.08);
+  background-color: rgba(43, 240, 255, 0.15);
   border-radius: 12px;
-  color: #DFFF00;
+  color: #2BF0FF;
   margin: 0 auto 16px;
 }
 
 .reason-card__title {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 20px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   margin-bottom: 8px;
   letter-spacing: 0.02em;
 }
 
 .reason-card__desc {
   font-size: 14px;
-  color: #A3A3A3;
+  color: #B6C2D9;
   line-height: 1.6;
 }
 
@@ -122,16 +122,16 @@
 }
 
 .contact-info__title {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 40px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   margin-bottom: 16px;
   letter-spacing: 0.02em;
 }
 
 .contact-info__text {
   font-size: 16px;
-  color: #A3A3A3;
+  color: #B6C2D9;
   line-height: 1.7;
   margin-bottom: 24px;
 }
@@ -157,24 +157,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1A1A1A;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #111827;
+  border: 1px solid rgba(43, 240, 255, 0.15);
   border-radius: 12px;
-  color: #DFFF00;
+  color: #2BF0FF;
   flex-shrink: 0;
 }
 
 .contact-info__item h4 {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   margin-bottom: 4px;
   letter-spacing: 0.02em;
 }
 
 .contact-info__item p {
   font-size: 14px;
-  color: #A3A3A3;
+  color: #B6C2D9;
 }
 
 /* Social Links */
@@ -184,9 +184,9 @@
 }
 
 .contact-social h4 {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   margin-bottom: 16px;
   letter-spacing: 0.02em;
 }
@@ -203,23 +203,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1A1A1A;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #111827;
+  border: 1px solid rgba(43, 240, 255, 0.15);
   border-radius: 12px;
-  color: #A3A3A3;
-  transition: all 0.3s ease;
+  color: #B6C2D9;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-social__link:hover {
-  border-color: #DFFF00;
-  color: #DFFF00;
+  border-color: #2BF0FF;
+  color: #2BF0FF;
   transform: translateY(-2px);
 }
 
 /* Contact Form */
 .contact-form-wrapper {
-  background-color: #141414;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #0A1024;
+  border: 1px solid rgba(43, 240, 255, 0.15);
   border-radius: 12px;
   padding: 40px;
   width: 100%;
@@ -228,16 +228,16 @@
 }
 
 .contact-form__title {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 32px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   margin-bottom: 8px;
   letter-spacing: 0.02em;
 }
 
 .contact-form__subtitle {
   font-size: 15px;
-  color: #A3A3A3;
+  color: #B6C2D9;
   margin-bottom: 32px;
 }
 
@@ -262,7 +262,7 @@
 .form-label {
   font-size: 14px;
   font-weight: 500;
-  color: #F5F5F5;
+  color: #FFFFFF;
 }
 
 /* Contact Form - Higher specificity to override components.css */
@@ -272,12 +272,12 @@
   width: 100%;
   padding: 14px 18px;
   background-color: #2a2a2a !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid rgba(43, 240, 255, 0.15) !important;
   border-radius: 12px;
-  color: #F5F5F5 !important;
+  color: #FFFFFF !important;
   font-size: 15px;
   font-family: 'Inter', sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   appearance: none;
   -webkit-appearance: none;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -286,14 +286,14 @@
 .contact-form-wrapper .form-input:focus,
 .contact-form-wrapper .form-textarea:focus,
 .contact-form-wrapper .form-select:focus {
-  border-color: #DFFF00 !important;
-  box-shadow: 0 0 0 3px rgba(223, 255, 0, 0.1);
+  border-color: #2BF0FF !important;
+  box-shadow: 0 0 0 3px rgba(43, 240, 255, 0.15);
   outline: none;
 }
 
 .contact-form-wrapper .form-input::placeholder,
 .contact-form-wrapper .form-textarea::placeholder {
-  color: #A3A3A3;
+  color: #B6C2D9;
   opacity: 0.8;
 }
 
@@ -312,8 +312,8 @@
 }
 
 .form-select option {
-  background-color: #111111;
-  color: #F5F5F5;
+  background-color: #0A1024;
+  color: #FFFFFF;
   padding: 8px;
 }
 
@@ -339,14 +339,14 @@
   width: 20px;
   height: 20px;
   margin-top: 2px;
-  accent-color: #DFFF00;
+  accent-color: #2BF0FF;
   cursor: pointer;
   flex-shrink: 0;
 }
 
 .form-checkbox__text {
   font-size: 14px;
-  color: #A3A3A3;
+  color: #B6C2D9;
   line-height: 1.5;
 }
 
@@ -374,15 +374,15 @@
 }
 
 .form-success__title {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 32px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   margin-bottom: 12px;
   letter-spacing: 0.02em;
 }
 
 .form-success__text {
-  color: #A3A3A3;
+  color: #B6C2D9;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -399,21 +399,21 @@
   font-weight: 500;
   letter-spacing: 0.02em;
   border-radius: 9999px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: none;
   text-decoration: none;
 }
 
 .btn--primary {
-  background-color: #DFFF00;
-  color: #0A0A0A;
+  background-color: #2BF0FF;
+  color: #050816;
 }
 
 .btn--primary:hover {
-  background-color: #B8FF3B;
+  background-color: #39FF88;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(223, 255, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(43, 240, 255, 0.015);
 }
 
 .btn--primary:disabled {
@@ -430,8 +430,8 @@
 .btn-spinner {
   width: 18px;
   height: 18px;
-  border: 2px solid rgba(10, 10, 10, 0.3);
-  border-top-color: #0A0A0A;
+  border: 1px solid rgba(5, 8, 22, 0.3);
+  border-top-color: #050816;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -444,7 +444,7 @@
 .faq-section {
   padding-top: 40px;
   padding-bottom: 80px;
-  background-color: #111111;
+  background-color: #0A1024;
 }
 
 .section-header {
@@ -453,16 +453,16 @@
 }
 
 .section-header__title {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 48px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   margin-bottom: 12px;
   letter-spacing: 0.02em;
 }
 
 .section-header__subtitle {
   font-size: 18px;
-  color: #A3A3A3;
+  color: #B6C2D9;
 }
 
 .faq-list {
@@ -474,15 +474,15 @@
 }
 
 .faq-item {
-  background-color: #1A1A1A;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #111827;
+  border: 1px solid rgba(43, 240, 255, 0.15);
   border-radius: 12px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-item:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(43, 240, 255, 0.15);
 }
 
 .faq-question {
@@ -494,28 +494,28 @@
   padding: 20px 24px;
   background: none;
   border: none;
-  color: #F5F5F5;
+  color: #FFFFFF;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: left;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-question:hover {
-  color: #DFFF00;
+  color: #2BF0FF;
 }
 
 .faq-chevron {
   flex-shrink: 0;
   transition: transform 0.3s ease;
-  color: #A3A3A3;
+  color: #B6C2D9;
 }
 
 .faq-item.open .faq-chevron {
   transform: rotate(180deg);
-  color: #DFFF00;
+  color: #2BF0FF;
 }
 
 .faq-answer {
@@ -531,7 +531,7 @@
 }
 
 .faq-answer p {
-  color: #A3A3A3;
+  color: #B6C2D9;
   font-size: 15px;
   line-height: 1.7;
 }

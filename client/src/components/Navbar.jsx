@@ -5,7 +5,6 @@ function Navbar() {
   const location = useLocation();
   
   const navLinks = [
-    { path: '/', label: 'Home' },
     { path: '/projects', label: 'Projects' },
     { path: '/blogs', label: 'Blogs' },
     { path: '/careers', label: 'Careers' },

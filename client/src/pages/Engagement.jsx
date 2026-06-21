@@ -16,85 +16,110 @@ const communityCards = [
     icon: Code,
     title: "Developer Community",
     description: "Tools, APIs, SDKs, and comprehensive documentation to help developers build on Blockscan.",
-    link: "#developer"
+    link: "#developer",
+    badge: "GROWING",
+    badgeColor: "#2BF0FF"
   },
   {
     icon: Globe,
     title: "Blockchain Community",
     description: "Join discussions, stay updated on ecosystem growth, and connect with blockchain enthusiasts.",
-    link: "#channels"
+    link: "#channels",
+    badge: "ACTIVE",
+    badgeColor: "#2BF0FF"
   },
   {
     icon: Handshake,
     title: "Partners",
     description: "Collaboration opportunities, integrations, and strategic partnerships to expand the ecosystem.",
-    link: "#partners"
+    link: "#partners",
+    badge: "VERIFIED",
+    badgeColor: "#7A3CFF"
   },
   {
     icon: Users,
     title: "Users",
     description: "Better access to blockchain data, intuitive explorers, and powerful analytics tools.",
-    link: "#"
+    link: "#",
+    badge: "EXPANDING",
+    badgeColor: "#2BF0FF"
   }
 ];
 
 const devResources = [
   {
     icon: FileCode,
-    title: "API Access",
-    description: "REST and GraphQL APIs for blockchain data, transactions, and smart contract interactions."
+    title: "API Docs",
+    description: "REST and GraphQL APIs for blockchain data, transactions, and smart contract interactions.",
+    badge: "LIVE",
+    badgeColor: "#2BF0FF",
+    toolIcon: "{ }"
   },
   {
     icon: BookOpen,
-    title: "Documentation",
-    description: "Comprehensive guides, API references, and integration tutorials for developers."
+    title: "SDKs",
+    description: "Comprehensive guides, API references, and integration tutorials for developers.",
+    badge: "STABLE",
+    badgeColor: "#7A3CFF",
+    toolIcon: "PKG"
   },
   {
     icon: Zap,
-    title: "Developer Tools",
-    description: "CLI tools, SDKs, and testing environments to accelerate blockchain development."
+    title: "Builder Tools",
+    description: "CLI tools, testing environments, and utilities to accelerate blockchain development.",
+    badge: "BETA",
+    badgeColor: "#2BF0FF",
+    toolIcon: "CLI"
   },
   {
     icon: Code,
     title: "Open Source",
-    description: "Contribute to Blockscan open source projects and collaborate with the community."
+    description: "Contribute to Blockscan open source projects and collaborate with the community.",
+    badge: "ACTIVE",
+    badgeColor: "#7A3CFF",
+    toolIcon: "<>"
   }
 ];
 
 const communityChannels = [
   {
     icon: MessageSquare,
-    title: "Twitter / X",
-    description: "Latest updates, news, and ecosystem highlights.",
-    members: "45K+",
-    link: "https://twitter.com"
+    title: "Discord",
+    description: "Community discussions",
+    members: "1250 members",
+    action: "Join →",
+    link: "https://discord.com"
   },
   {
     icon: MessageSquare,
-    title: "Discord",
-    description: "Real-time chat, support, and community discussions.",
-    members: "28K+",
-    link: "https://discord.com"
+    title: "Twitter / X",
+    description: "Latest updates and news",
+    members: "45K followers",
+    action: "Follow →",
+    link: "https://twitter.com"
   },
   {
     icon: MessageCircle,
     title: "Telegram",
-    description: "Announcements, AMAs, and regional community groups.",
-    members: "18K+",
+    description: "Announcements",
+    members: "680 members",
+    action: "Join →",
     link: "https://telegram.org"
   },
   {
     icon: Globe,
     title: "LinkedIn",
-    description: "Professional network, company updates, and career opportunities.",
-    members: "12K+",
+    description: "Professional network",
+    members: "12K connections",
+    action: "Connect →",
     link: "https://linkedin.com"
   },
   {
     icon: Code,
     title: "GitHub",
-    description: "Open source repositories, contributions, and developer collaboration.",
-    members: "3.5K+",
+    description: "Open source collaboration",
+    members: "48 repositories",
+    action: "Explore →",
     link: "https://github.com"
   }
 ];
@@ -103,22 +128,30 @@ const events = [
   {
     icon: Calendar,
     title: "Blockchain Events",
-    description: "Hackathons, conferences, and meetups worldwide. Connect with the community in person."
+    description: "Hackathons, conferences, and meetups worldwide. Connect with the community in person.",
+    badge: "UPCOMING",
+    badgeColor: "#2BF0FF"
   },
   {
     icon: Bell,
     title: "Product Updates",
-    description: "Stay informed about new features, improvements, and platform enhancements."
+    description: "Stay informed about new features, improvements, and platform enhancements.",
+    badge: "LIVE",
+    badgeColor: "#7A3CFF"
   },
   {
     icon: Radio,
     title: "Community Announcements",
-    description: "Important updates, governance proposals, and ecosystem news."
+    description: "Important updates, governance proposals, and ecosystem news.",
+    badge: "NEW",
+    badgeColor: "#2BF0FF"
   },
   {
     icon: BookOpen,
     title: "Technical Blogs",
-    description: "Deep dives into blockchain technology, tutorials, and engineering insights."
+    description: "Deep dives into blockchain technology, tutorials, and engineering insights.",
+    badge: "WEEKLY",
+    badgeColor: "#7A3CFF"
   }
 ];
 
@@ -132,19 +165,41 @@ const stats = [
 function Engagement() {
   return (
     <div className="engagement-page">
-      {/* Hero Section */}
+      {/* Hero Section - Ecosystem Hub */}
       <section className="engagement-hero">
         <div className="engagement-hero__bg" />
         <div className="container">
-          <span className="tag">Community</span>
+          <span className="tag">Ecosystem</span>
           <h1 className="engagement-hero__title">
-            Engage With the Blockscan Ecosystem
+            Ecosystem Hub
           </h1>
           <p className="engagement-hero__subtitle">
-            Connect with developers, blockchain enthusiasts, partners, and the community
-            building the future of Web3. Together we create the infrastructure for
-            decentralized innovation.
+            Connect, build and collaborate across the Blockscan ecosystem.
           </p>
+          
+          {/* Stats Row */}
+          <div className="ecosystem-stats">
+            <div className="ecosystem-stat">
+              <span className="ecosystem-stat__value">1250+</span>
+              <span className="ecosystem-stat__label">Members</span>
+            </div>
+            <div className="ecosystem-stat__divider" />
+            <div className="ecosystem-stat">
+              <span className="ecosystem-stat__value">12</span>
+              <span className="ecosystem-stat__label">Contributors</span>
+            </div>
+            <div className="ecosystem-stat__divider" />
+            <div className="ecosystem-stat">
+              <span className="ecosystem-stat__value">8</span>
+              <span className="ecosystem-stat__label">Community Channels</span>
+            </div>
+            <div className="ecosystem-stat__divider" />
+            <div className="ecosystem-stat">
+              <span className="ecosystem-stat__value">4</span>
+              <span className="ecosystem-stat__label">Ecosystem Projects</span>
+            </div>
+          </div>
+
           <div className="engagement-hero__cta">
             <a href="#channels" className="btn btn-primary">
               Join Community <ArrowRight size={18} />
@@ -195,7 +250,7 @@ function Engagement() {
         </div>
       </section>
 
-      {/* Partnership Section */}
+      {/* Partnership Section - Premium Ecosystem Orbit */}
       <section id="partners" className="engagement-section">
         <div className="container">
           <div className="partnership-block">
@@ -219,16 +274,34 @@ function Engagement() {
               </a>
             </div>
             <div className="partnership-block__visual">
-              <div className="partnership-visual">
-                <div className="partnership-visual__center">
-                  <Layers size={40} />
+              <div className="ecosystem-orbit">
+                <div className="ecosystem-orbit__center">
+                  <Layers size={32} />
                   <span>Blockscan</span>
                 </div>
-                <div className="partnership-visual__orbit">
-                  <div className="orbit-node"><Code size={20} /></div>
-                  <div className="orbit-node"><Globe size={20} /></div>
-                  <div className="orbit-node"><Handshake size={20} /></div>
-                  <div className="orbit-node"><Users size={20} /></div>
+                <div className="ecosystem-orbit__ring ecosystem-orbit__ring--1">
+                  <div className="ecosystem-orbit__node">
+                    <Code size={16} />
+                    <span>Developers</span>
+                  </div>
+                </div>
+                <div className="ecosystem-orbit__ring ecosystem-orbit__ring--2">
+                  <div className="ecosystem-orbit__node">
+                    <Users size={16} />
+                    <span>Community</span>
+                  </div>
+                </div>
+                <div className="ecosystem-orbit__ring ecosystem-orbit__ring--3">
+                  <div className="ecosystem-orbit__node">
+                    <Globe size={16} />
+                    <span>Projects</span>
+                  </div>
+                </div>
+                <div className="ecosystem-orbit__ring ecosystem-orbit__ring--4">
+                  <div className="ecosystem-orbit__node">
+                    <Handshake size={16} />
+                    <span>Partners</span>
+                  </div>
                 </div>
               </div>
             </div>

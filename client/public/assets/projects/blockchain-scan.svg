@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0A0A0A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.06">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="500" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="500" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="500" stroke="#DFFF00" stroke-width="0.5"/>
+  </g>
+
+  <!-- Outer frame -->
+  <rect x="120" y="80" width="560" height="340" fill="none" stroke="#DFFF00" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Corner brackets -->
+  <path d="M 280 130 L 280 110 L 300 110" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 500 110 L 520 110 L 520 130" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 280 370 L 280 390 L 300 390" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 500 390 L 520 390 L 520 370" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Magnifying glass handle -->
+  <line x1="445" y1="305" x2="520" y2="380" stroke="#DFFF00" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  <line x1="450" y1="300" x2="525" y2="375" stroke="#DFFF00" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Magnifying glass outer ring -->
+  <circle cx="360" cy="250" r="110" fill="none" stroke="#DFFF00" stroke-width="2.5" opacity="0.95"/>
+  <circle cx="360" cy="250" r="106" fill="none" stroke="#DFFF00" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Inner glow ring -->
+  <circle cx="360" cy="250" r="100" fill="none" stroke="#DFFF00" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Blockchain blocks inside magnifying glass -->
+  <!-- Block 1 (top-left) -->
+  <rect x="300" y="190" width="36" height="36" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.85"/>
+  <line x1="318" y1="190" x2="318" y2="226" stroke="#DFFF00" stroke-width="0.6" opacity="0.4"/>
+  <line x1="300" y1="208" x2="336" y2="208" stroke="#DFFF00" stroke-width="0.6" opacity="0.4"/>
+  <circle cx="318" cy="208" r="3" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.7"/>
+
+  <!-- Block 2 (top-right) -->
+  <rect x="384" y="190" width="36" height="36" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.85"/>
+  <line x1="402" y1="190" x2="402" y2="226" stroke="#DFFF00" stroke-width="0.6" opacity="0.4"/>
+  <line x1="384" y1="208" x2="420" y2="208" stroke="#DFFF00" stroke-width="0.6" opacity="0.4"/>
+  <circle cx="402" cy="208" r="3" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.7"/>
+
+  <!-- Block 3 (bottom-left) -->
+  <rect x="300" y="274" width="36" height="36" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.85"/>
+  <line x1="318" y1="274" x2="318" y2="310" stroke="#DFFF00" stroke-width="0.6" opacity="0.4"/>
+  <line x1="300" y1="292" x2="336" y2="292" stroke="#DFFF00" stroke-width="0.6" opacity="0.4"/>
+  <circle cx="318" cy="292" r="3" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.7"/>
+
+  <!-- Block 4 (bottom-right) -->
+  <rect x="384" y="274" width="36" height="36" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.85"/>
+  <line x1="402" y1="274" x2="402" y2="310" stroke="#DFFF00" stroke-width="0.6" opacity="0.4"/>
+  <line x1="384" y1="292" x2="420" y2="292" stroke="#DFFF00" stroke-width="0.6" opacity="0.4"/>
+  <circle cx="402" cy="292" r="3" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.7"/>
+
+  <!-- Block connections (chain links) -->
+  <line x1="336" y1="208" x2="384" y2="208" stroke="#DFFF00" stroke-width="1" opacity="0.5"/>
+  <line x1="318" y1="226" x2="318" y2="274" stroke="#DFFF00" stroke-width="1" opacity="0.5"/>
+  <line x1="336" y1="292" x2="384" y2="292" stroke="#DFFF00" stroke-width="1" opacity="0.5"/>
+  <line x1="402" y1="226" x2="402" y2="274" stroke="#DFFF00" stroke-width="1" opacity="0.5"/>
+  <line x1="336" y1="208" x2="384" y2="292" stroke="#DFFF00" stroke-width="0.6" opacity="0.25"/>
+  <line x1="384" y1="208" x2="336" y2="292" stroke="#DFFF00" stroke-width="0.6" opacity="0.25"/>
+
+  <!-- Circuit lines extending from blocks -->
+  <line x1="300" y1="208" x2="260" y2="208" stroke="#DFFF00" stroke-width="0.7" opacity="0.4"/>
+  <line x1="260" y1="208" x2="260" y2="180" stroke="#DFFF00" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="260" cy="180" r="2.5" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+
+  <line x1="420" y1="208" x2="460" y2="208" stroke="#DFFF00" stroke-width="0.7" opacity="0.4"/>
+  <line x1="460" y1="208" x2="460" y2="180" stroke="#DFFF00" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="460" cy="180" r="2.5" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+
+  <line x1="300" y1="292" x2="260" y2="292" stroke="#DFFF00" stroke-width="0.7" opacity="0.4"/>
+  <line x1="260" y1="292" x2="260" y2="320" stroke="#DFFF00" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="260" cy="320" r="2.5" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+
+  <line x1="420" y1="292" x2="460" y2="292" stroke="#DFFF00" stroke-width="0.7" opacity="0.4"/>
+  <line x1="460" y1="292" x2="460" y2="320" stroke="#DFFF00" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="460" cy="320" r="2.5" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+
+  <!-- Glowing data nodes around the glass -->
+  <circle cx="360" cy="130" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.8"/>
+  <circle cx="360" cy="130" r="1.5" fill="#DFFF00" opacity="0.5"/>
+
+  <circle cx="250" cy="250" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.8"/>
+  <circle cx="250" cy="250" r="1.5" fill="#DFFF00" opacity="0.5"/>
+
+  <circle cx="470" cy="250" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.8"/>
+  <circle cx="470" cy="250" r="1.5" fill="#DFFF00" opacity="0.5"/>
+
+  <circle cx="360" cy="370" r="4" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.8"/>
+  <circle cx="360" cy="370" r="1.5" fill="#DFFF00" opacity="0.5"/>
+
+  <!-- Data flow lines from outer nodes to ring -->
+  <line x1="360" y1="134" x2="360" y2="140" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="254" y1="250" x2="260" y2="250" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="466" y1="250" x2="460" y2="250" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="360" y1="366" x2="360" y2="360" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Scan lines (horizontal) -->
+  <line x1="150" y1="180" x2="240" y2="180" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="6 3"/>
+  <line x1="150" y1="320" x2="240" y2="320" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="6 3"/>
+  <line x1="480" y1="160" x2="620" y2="160" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="6 3"/>
+  <line x1="480" y1="340" x2="620" y2="340" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="6 3"/>
+
+  <!-- Small decorative dots -->
+  <circle cx="200" cy="150" r="2" fill="#DFFF00" opacity="0.3"/>
+  <circle cx="600" cy="350" r="2" fill="#DFFF00" opacity="0.3"/>
+  <circle cx="220" cy="360" r="1.5" fill="#DFFF00" opacity="0.2"/>
+  <circle cx="580" cy="160" r="1.5" fill="#DFFF00" opacity="0.2"/>
+
+  <!-- Horizontal scan line across center -->
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#DFFF00" stroke-width="0.3" opacity="0.08"/>
+</svg>

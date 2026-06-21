@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0A0A0A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.06">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="500" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="500" stroke="#DFFF00" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="500" stroke="#DFFF00" stroke-width="0.5"/>
+  </g>
+
+  <!-- Outer frame -->
+  <rect x="120" y="80" width="560" height="340" fill="none" stroke="#DFFF00" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Corner brackets -->
+  <path d="M 280 130 L 280 110 L 300 110" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 500 110 L 520 110 L 520 130" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 280 370 L 280 390 L 300 390" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 500 390 L 520 390 L 520 370" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Central Cloud -->
+  <path d="M 360 200 
+           C 340 200, 330 215, 335 230
+           C 320 230, 310 245, 315 260
+           C 310 275, 325 290, 345 290
+           L 455 290
+           C 475 290, 490 275, 485 260
+           C 490 245, 480 230, 465 230
+           C 470 215, 460 200, 440 200
+           C 435 185, 420 175, 400 175
+           C 380 175, 365 185, 360 200 Z" 
+        fill="none" stroke="#DFFF00" stroke-width="2" opacity="0.9"/>
+
+  <!-- Cloud inner detail lines -->
+  <path d="M 350 230 C 365 225, 380 225, 395 230" fill="none" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+  <path d="M 405 230 C 420 225, 435 225, 450 230" fill="none" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+  <path d="M 340 260 C 360 255, 380 255, 400 260" fill="none" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+  <path d="M 410 260 C 430 255, 450 255, 460 260" fill="none" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- VM Nodes below cloud -->
+  <!-- VM 1 -->
+  <rect x="310" y="310" width="28" height="40" rx="3" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.85"/>
+  <line x1="318" y1="320" x2="330" y2="320" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="318" y1="326" x2="330" y2="326" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="318" y1="332" x2="330" y2="332" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="318" cy="345" r="2" fill="#DFFF00" opacity="0.6"/>
+
+  <!-- VM 2 -->
+  <rect x="352" y="310" width="28" height="40" rx="3" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.85"/>
+  <line x1="360" y1="320" x2="372" y2="320" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="360" y1="326" x2="372" y2="326" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="360" y1="332" x2="372" y2="332" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="360" cy="345" r="2" fill="#DFFF00" opacity="0.6"/>
+
+  <!-- VM 3 -->
+  <rect x="394" y="310" width="28" height="40" rx="3" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.85"/>
+  <line x1="402" y1="320" x2="414" y2="320" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="402" y1="326" x2="414" y2="326" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="402" y1="332" x2="414" y2="332" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="402" cy="345" r="2" fill="#DFFF00" opacity="0.6"/>
+
+  <!-- VM 4 -->
+  <rect x="436" y="310" width="28" height="40" rx="3" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.85"/>
+  <line x1="444" y1="320" x2="456" y2="320" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="444" y1="326" x2="456" y2="326" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="444" y1="332" x2="456" y2="332" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="444" cy="345" r="2" fill="#DFFF00" opacity="0.6"/>
+
+  <!-- VM 5 -->
+  <rect x="478" y="310" width="28" height="40" rx="3" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.85"/>
+  <line x1="486" y1="320" x2="498" y2="320" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="486" y1="326" x2="498" y2="326" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="486" y1="332" x2="498" y2="332" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="486" cy="345" r="2" fill="#DFFF00" opacity="0.6"/>
+
+  <!-- Connection lines: cloud to VMs -->
+  <line x1="324" y1="290" x2="324" y2="310" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="366" y1="290" x2="366" y2="310" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="408" y1="290" x2="408" y2="310" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="450" y1="290" x2="450" y2="310" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="492" y1="290" x2="492" y2="310" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Horizontal connection between VMs -->
+  <line x1="338" y1="330" x2="352" y2="330" stroke="#DFFF00" stroke-width="0.6" opacity="0.3"/>
+  <line x1="380" y1="330" x2="394" y2="330" stroke="#DFFF00" stroke-width="0.6" opacity="0.3"/>
+  <line x1="422" y1="330" x2="436" y2="330" stroke="#DFFF00" stroke-width="0.6" opacity="0.3"/>
+  <line x1="464" y1="330" x2="478" y2="330" stroke="#DFFF00" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- Crypto/Payment symbol (wallet icon) -->
+  <rect x="520" y="200" width="36" height="28" rx="3" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.8"/>
+  <line x1="520" y1="208" x2="556" y2="208" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="546" cy="214" r="3" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.7"/>
+  <line x1="530" y1="222" x2="546" y2="222" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Connection: cloud to wallet -->
+  <line x1="470" y1="230" x2="520" y2="214" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="495" cy="222" r="2" fill="#DFFF00" opacity="0.4"/>
+
+  <!-- Dashboard/Control panel symbol -->
+  <rect x="240" y="200" width="40" height="32" rx="2" fill="none" stroke="#DFFF00" stroke-width="1.2" opacity="0.8"/>
+  <line x1="248" y1="208" x2="272" y2="208" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="248" y1="214" x2="264" y2="214" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="248" y1="220" x2="268" y2="220" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="248" y1="226" x2="260" y2="226" stroke="#DFFF00" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Connection: dashboard to cloud -->
+  <line x1="280" y1="216" x2="330" y2="230" stroke="#DFFF00" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="305" cy="223" r="2" fill="#DFFF00" opacity="0.4"/>
+
+  <!-- Deployment arrows -->
+  <path d="M 400 175 L 400 165" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+  <polygon points="400,160 396,168 404,168" fill="none" stroke="#DFFF00" stroke-width="1" opacity="0.6"/>
+
+  <!-- Data flow lines -->
+  <line x1="180" y1="180" x2="240" y2="200" stroke="#DFFF00" stroke-width="0.6" opacity="0.3" stroke-dasharray="4 2"/>
+  <line x1="180" y1="240" x2="240" y2="224" stroke="#DFFF00" stroke-width="0.6" opacity="0.3" stroke-dasharray="4 2"/>
+  <line x1="556" y1="200" x2="620" y2="180" stroke="#DFFF00" stroke-width="0.6" opacity="0.3" stroke-dasharray="4 2"/>
+  <line x1="556" y1="224" x2="620" y2="240" stroke="#DFFF00" stroke-width="0.6" opacity="0.3" stroke-dasharray="4 2"/>
+
+  <!-- Small decorative nodes -->
+  <circle cx="200" cy="150" r="2" fill="#DFFF00" opacity="0.3"/>
+  <circle cx="600" cy="350" r="2" fill="#DFFF00" opacity="0.3"/>
+  <circle cx="220" cy="360" r="1.5" fill="#DFFF00" opacity="0.2"/>
+  <circle cx="580" cy="160" r="1.5" fill="#DFFF00" opacity="0.2"/>
+
+  <!-- Scan lines -->
+  <line x1="150" y1="180" x2="220" y2="180" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="6 3"/>
+  <line x1="150" y1="320" x2="220" y2="320" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="6 3"/>
+  <line x1="580" y1="160" x2="650" y2="160" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="6 3"/>
+  <line x1="580" y1="340" x2="650" y2="340" stroke="#DFFF00" stroke-width="0.5" opacity="0.2" stroke-dasharray="6 3"/>
+
+  <!-- Horizontal scan line -->
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#DFFF00" stroke-width="0.3" opacity="0.08"/>
+</svg>

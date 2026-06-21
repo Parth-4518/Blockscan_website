@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0a; }
+      .grid { stroke: rgba(223, 255, 0, 0.04); stroke-width: 0.5; }
+      .wire { fill: none; stroke: #DFFF00; stroke-width: 0.6; opacity: 0.2; }
+      .node { fill: #DFFF00; }
+      .text { font-family: 'IBM Plex Sans', monospace; font-size: 8px; fill: rgba(223, 255, 0, 0.1); letter-spacing: 0.2em; }
+    </style>
+    <pattern id="g" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" class="grid"/>
+    </pattern>
+    <radialGradient id="spot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#DFFF00" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#DFFF00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" class="bg"/>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect width="800" height="500" fill="url(#spot)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 30 30 L 30 60 L 60 60" class="wire" fill="none" opacity="0.3"/>
+  <path d="M 770 30 L 770 60 L 740 60" class="wire" fill="none" opacity="0.3"/>
+  <path d="M 30 470 L 30 440 L 60 440" class="wire" fill="none" opacity="0.3"/>
+  <path d="M 770 470 L 770 440 L 740 440" class="wire" fill="none" opacity="0.3"/>
+
+  <!-- ============================================
+       HERO: Neural brain + circuits + intelligence nodes
+       ============================================ -->
+  <g transform="translate(400, 260) scale(11)">
+    <!-- Brain outline -->
+    <path d="M-6 -6 Q -10 -2 -8 2 Q -10 6 -4 8 Q 0 10 4 8 Q 10 6 8 2 Q 10 -2 6 -6 Q 2 -10 -2 -8 Q -6 -10 -6 -6" class="wire" stroke-width="0.5" fill="none"/>
+
+    <!-- Neural pathways -->
+    <path d="M-4 -2 Q 0 0 4 -2" class="wire" stroke-width="0.3" opacity="0.4" fill="none"/>
+    <path d="M-3 2 Q 0 4 3 2" class="wire" stroke-width="0.3" opacity="0.4" fill="none"/>
+    <path d="M-2 -6 Q 0 -4 2 -6" class="wire" stroke-width="0.3" opacity="0.4" fill="none"/>
+    <path d="M-4 0 Q -2 2 0 0" class="wire" stroke-width="0.3" opacity="0.4" fill="none"/>
+    <path d="M0 0 Q 2 2 4 0" class="wire" stroke-width="0.3" opacity="0.4" fill="none"/>
+
+    <!-- Circuit lines -->
+    <line x1="-8" y1="-4" x2="-10" y2="-4" class="wire" stroke-width="0.3" opacity="0.3"/>
+    <line x1="8" y1="-4" x2="10" y2="-4" class="wire" stroke-width="0.3" opacity="0.3"/>
+    <line x1="-8" y1="4" x2="-10" y2="4" class="wire" stroke-width="0.3" opacity="0.3"/>
+    <line x1="8" y1="4" x2="10" y2="4" class="wire" stroke-width="0.3" opacity="0.3"/>
+
+    <!-- Intelligence nodes -->
+    <circle cx="-4" cy="-2" r="0.4" class="node" opacity="0.5"/>
+    <circle cx="4" cy="-2" r="0.4" class="node" opacity="0.5"/>
+    <circle cx="0" cy="4" r="0.4" class="node" opacity="0.6"/>
+    <circle cx="0" cy="-6" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="-6" cy="2" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="6" cy="2" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="0" cy="0" r="0.5" class="node" opacity="0.7"/>
+
+    <!-- Outer circuit nodes -->
+    <circle cx="-10" cy="-4" r="0.2" class="node" opacity="0.4"/>
+    <circle cx="10" cy="-4" r="0.2" class="node" opacity="0.4"/>
+    <circle cx="-10" cy="4" r="0.2" class="node" opacity="0.4"/>
+    <circle cx="10" cy="4" r="0.2" class="node" opacity="0.4"/>
+  </g>
+
+  <text x="40" y="40" class="text">AI INFRASTRUCTURE</text>
+  <text x="40" y="52" class="text">FRAMEWORK: LEVI</text>
+  <text x="600" y="465" class="text">OPENSCAN AI</text>
+</svg>
