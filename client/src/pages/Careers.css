@@ -1,0 +1,197 @@
+.careers-page {
+  background-color: #0A0A0A;
+  min-height: 100vh;
+}
+
+/* Hero */
+.careers-hero {
+  position: relative;
+  padding: 120px 0 80px;
+  overflow: hidden;
+}
+
+.careers-hero__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(223, 255, 0, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 50%, rgba(223, 255, 0, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.careers-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.careers-hero__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 64px;
+  color: #F5F5F5;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+.careers-hero__subtitle {
+  font-size: 18px;
+  color: #A3A3A3;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.careers-hero__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #DFFF00;
+  color: #0A0A0A;
+}
+
+.btn-primary:hover {
+  background-color: #DFFF00;
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(223, 255, 0, 0.2);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #F5F5F5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Sections */
+.careers-section {
+  padding: 60px 0;
+}
+
+.careers-section .section-header {
+  margin-bottom: 40px;
+}
+
+/* Jobs Grid */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Culture Grid */
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* CTA Section */
+.careers-cta {
+  padding: 60px 0 80px;
+}
+
+.careers-cta__card {
+  background-color: #1A1A1A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.careers-cta__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 32px;
+  color: #F5F5F5;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.careers-cta__subtitle {
+  font-size: 16px;
+  color: #A3A3A3;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .jobs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .culture-grid,
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .careers-hero__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .careers-hero {
+    padding: 80px 0 60px;
+  }
+
+  .careers-hero__title {
+    font-size: 36px;
+  }
+
+  .careers-hero__subtitle {
+    font-size: 16px;
+  }
+
+  .jobs-grid,
+  .culture-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-cta__card {
+    padding: 32px 24px;
+  }
+
+  .careers-cta__title {
+    font-size: 24px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,5 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 import connectDB from "./config/db.js";
 
 // Routes
@@ -13,6 +16,7 @@ const app = express();
 /* =========================
    MIDDLEWARE
 ========================= */
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -28,10 +32,22 @@ app.get("/api/test", (req, res) => {
 });
 
 /* =========================
-   ROUTES
+   API ROUTES
 ========================= */
 app.use("/api/contact", contactRoutes);
 app.use("/api/career", careerRoutes);
+
+/* =========================
+   STATIC FILES & SPA FALLBACK
+========================= */
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, "../client/dist")));
+
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+});
 
 /* =========================
    404 HANDLER (MUST BE LAST)
