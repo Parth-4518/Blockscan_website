@@ -12,3 +12,17 @@
   background: var(--color-bg-primary, #050816);
   min-height: 100vh;
 }
+
+/* CRT overlay for retro effects */
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.crt-overlay.active {
+  opacity: 1;
+}
