@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
-import MainLayout from './layouts/MainLayout'
 import About from './pages/About'
 import Services from './pages/Services'
 import Team from './pages/Team'
