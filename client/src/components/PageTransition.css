@@ -1,0 +1,54 @@
+.page-transition-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page-transition {
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-transition.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition.fadeOut {
+  opacity: 0;
+  transform: translateY(-16px);
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-transition.black {
+  opacity: 0;
+}
+
+/* Black overlay */
+.page-black-overlay {
+  position: fixed;
+  inset: 0;
+  background: #050816;
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.page-black-overlay.overlay-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition,
+  .page-black-overlay {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
