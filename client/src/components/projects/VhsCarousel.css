@@ -1,0 +1,202 @@
+.vhs-carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 60px;
+  overflow: hidden;
+}
+
+/* Decorative top line */
+.vhs-carousel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(43, 240, 255, 0.15),
+    transparent
+  );
+}
+
+/* Track */
+.vhs-carousel__track {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Flat 2D with skewX fake-3D — no perspective blur */
+}
+
+/* Individual tape item */
+.vhs-carousel__item {
+  position: absolute;
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  will-change: transform, opacity;
+}
+
+.vhs-carousel__item.active {
+  cursor: default;
+}
+
+/* Navigation Arrows */
+.vhs-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(43, 240, 255, 0.06);
+  border: 1px solid rgba(43, 240, 255, 0.15);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+}
+
+.vhs-carousel__arrow:hover {
+  background: rgba(43, 240, 255, 0.1);
+  border-color: #2BF0FF;
+  color: #2BF0FF;
+  box-shadow: 0 0 30px rgba(43, 240, 255, 0.2);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.vhs-carousel__arrow--prev {
+  left: 60px;
+}
+
+.vhs-carousel__arrow--next {
+  right: 60px;
+}
+
+/* Progress Dots */
+.vhs-carousel__progress {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+  z-index: 10;
+}
+
+.vhs-carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(43, 240, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  position: relative;
+}
+
+.vhs-carousel__dot::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.vhs-carousel__dot:hover {
+  background: rgba(43, 240, 255, 0.15);
+}
+
+.vhs-carousel__dot:hover::before {
+  border-color: rgba(43, 240, 255, 0.15);
+}
+
+.vhs-carousel__dot.active {
+  background: #2BF0FF;
+  width: 40px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(43, 240, 255, 0.3);
+}
+
+/* Decorative system text */
+.vhs-carousel__system-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Inter', monospace;
+  font-size: 9px;
+  color: rgba(43, 240, 255, 0.15);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   SHUFFLE ANIMATION — VHS Archive Scan
+   ======================================== */
+
+/* During shuffle, items move at medium speed */
+.vhs-carousel.is-shuffling .vhs-carousel__item {
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active card during shuffle: glow */
+.vhs-carousel.is-shuffling .vhs-carousel__item.active {
+  filter: brightness(1.15) contrast(1.05);
+}
+
+/* Adjacent cards during shuffle — no blur, keep visible */
+.vhs-carousel.is-shuffling .vhs-carousel__item:not(.active) {
+  filter: none;
+  opacity: 0.7;
+}
+
+/* Disable pointer events during shuffle */
+.vhs-carousel.is-shuffling .vhs-carousel__arrow,
+.vhs-carousel.is-shuffling .vhs-carousel__dot {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .vhs-carousel {
+    padding: 60px 0 48px;
+  }
+
+  .vhs-carousel__track {
+    height: 440px;
+  }
+
+  .vhs-carousel__arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .vhs-carousel__arrow--prev {
+    left: 16px;
+  }
+
+  .vhs-carousel__arrow--next {
+    right: 16px;
+  }
+
+  .vhs-carousel__progress {
+    margin-top: 32px;
+    gap: 10px;
+  }
+}

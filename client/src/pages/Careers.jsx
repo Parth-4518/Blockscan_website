@@ -1,9 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import JobCard from '../components/JobCard';
 import CultureCard from '../components/CultureCard';
 import BenefitsCard from '../components/BenefitsCard';
-import { Lightbulb, Shield, Users, BookOpen, Monitor, TrendingUp, Coffee, Blocks, ArrowRight, Mail } from 'lucide-react';
+import { Lightbulb, Shield, Users, BookOpen, Monitor, TrendingUp, Coffee, Blocks, ArrowRight, Mail, Globe, Building, Wifi } from 'lucide-react';
 import './Careers.css';
 
 const jobs = [
@@ -123,6 +122,37 @@ function Careers() {
           </div>
         </div>
         <div className="careers-hero__bg" />
+      </section>
+
+      {/* Statistics Row */}
+      <section className="careers-stats">
+        <div className="container">
+          <div className="stats-row">
+            <div className="stats-row__item">
+              <Users size={20} className="stats-row__icon" />
+              <span className="stats-row__value">12</span>
+              <span className="stats-row__label">Open Roles</span>
+            </div>
+            <div className="stats-row__divider" />
+            <div className="stats-row__item">
+              <Building size={20} className="stats-row__icon" />
+              <span className="stats-row__value">4</span>
+              <span className="stats-row__label">Teams</span>
+            </div>
+            <div className="stats-row__divider" />
+            <div className="stats-row__item">
+              <Globe size={20} className="stats-row__icon" />
+              <span className="stats-row__value">3</span>
+              <span className="stats-row__label">Locations</span>
+            </div>
+            <div className="stats-row__divider" />
+            <div className="stats-row__item">
+              <Wifi size={20} className="stats-row__icon" />
+              <span className="stats-row__value">Remote</span>
+              <span className="stats-row__label">Friendly</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Open Positions */}

@@ -6,29 +6,28 @@
   justify-content: center;
   text-align: center;
   padding: 24px;
-  background-color: #0A0A0A;
+  background-color: #050816;
 }
 
 .not-found__code {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 120px;
-  color: #DFFF00;
+  color: #2BF0FF;
   line-height: 1;
   margin-bottom: 16px;
-  text-shadow: 4px 4px 0px rgba(223, 255, 0, 0.2);
   letter-spacing: 0.05em;
 }
 
 .not-found__title {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 32px;
-  color: #F5F5F5;
+  color: #FFFFFF;
   margin-bottom: 16px;
   letter-spacing: 0.02em;
 }
 
 .not-found__text {
-  color: #A3A3A3;
+  color: #B6C2D9;
   margin-bottom: 32px;
   max-width: 400px;
   font-size: 16px;

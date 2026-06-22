@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, Briefcase, Clock } from 'lucide-react';
 
 const JobCard = ({ job }) => {

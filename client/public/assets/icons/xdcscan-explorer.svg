@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- XDCScan Explorer: Orbital Blockchain Globe -->
+  <defs>
+    <style>
+      .primary { stroke: #DFFF00; }
+      .secondary { stroke: rgba(223, 255, 0, 0.35); }
+      .tertiary { stroke: rgba(223, 255, 0, 0.12); }
+    </style>
+  </defs>
+  
+  <!-- Outer orbital ring with blockchain nodes -->
+  <circle cx="60" cy="60" r="52" class="tertiary" stroke-dasharray="3 6"/>
+  <circle cx="60" cy="8" r="3" class="secondary" fill="rgba(223,255,0,0.2)"/>
+  <circle cx="109" cy="39" r="3" class="secondary" fill="rgba(223,255,0,0.2)"/>
+  <circle cx="109" cy="81" r="3" class="secondary" fill="rgba(223,255,0,0.2)"/>
+  <circle cx="60" cy="112" r="3" class="secondary" fill="rgba(223,255,0,0.2)"/>
+  <circle cx="11" cy="81" r="3" class="secondary" fill="rgba(223,255,0,0.2)"/>
+  <circle cx="11" cy="39" r="3" class="secondary" fill="rgba(223,255,0,0.2)"/>
+  
+  <!-- Middle ring -->
+  <circle cx="60" cy="60" r="38" class="secondary" stroke-dasharray="2 4"/>
+  
+  <!-- Inner globe with grid lines -->
+  <circle cx="60" cy="60" r="24" class="primary"/>
+  <ellipse cx="60" cy="60" rx="24" ry="8" class="secondary"/>
+  <ellipse cx="60" cy="60" rx="8" ry="24" class="secondary"/>
+  <path d="M36 60 Q60 48 84 60" class="secondary"/>
+  <path d="M36 60 Q60 72 84 60" class="secondary"/>
+  
+  <!-- Blockscan B-like cross structure -->
+  <line x1="60" y1="12" x2="60" y2="24" class="primary"/>
+  <line x1="60" y1="96" x2="60" y2="108" class="primary"/>
+  <line x1="12" y1="60" x2="24" y2="60" class="primary"/>
+  <line x1="96" y1="60" x2="108" y2="60" class="primary"/>
+  
+  <!-- Center block node -->
+  <rect x="56" y="56" width="8" height="8" rx="1" class="primary" fill="rgba(223,255,0,0.15)"/>
+  <circle cx="60" cy="60" r="2" class="primary" fill="#DFFF00"/>
+</svg>

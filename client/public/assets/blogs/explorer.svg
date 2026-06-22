@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0a; }
+      .grid { stroke: rgba(223, 255, 0, 0.04); stroke-width: 0.5; }
+      .wire { fill: none; stroke: #DFFF00; stroke-width: 0.6; opacity: 0.2; }
+      .node { fill: #DFFF00; }
+      .text { font-family: 'IBM Plex Sans', monospace; font-size: 8px; fill: rgba(223, 255, 0, 0.1); letter-spacing: 0.2em; }
+    </style>
+    <pattern id="g" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" class="grid"/>
+    </pattern>
+    <radialGradient id="spot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#DFFF00" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#DFFF00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" class="bg"/>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect width="800" height="500" fill="url(#spot)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 30 30 L 30 60 L 60 60" class="wire" fill="none" opacity="0.3"/>
+  <path d="M 770 30 L 770 60 L 740 60" class="wire" fill="none" opacity="0.3"/>
+  <path d="M 30 470 L 30 440 L 60 440" class="wire" fill="none" opacity="0.3"/>
+  <path d="M 770 470 L 770 440 L 740 440" class="wire" fill="none" opacity="0.3"/>
+
+  <!-- ============================================
+       HERO: Globe + network nodes + orbit rings
+       ============================================ -->
+  <g transform="translate(400, 260) scale(11)">
+    <!-- Orbit rings -->
+    <ellipse cx="0" cy="0" rx="18" ry="5" class="wire" transform="rotate(-20)" opacity="0.3"/>
+    <ellipse cx="0" cy="0" rx="18" ry="5" class="wire" transform="rotate(40)" opacity="0.2"/>
+
+    <!-- Globe -->
+    <circle cx="0" cy="0" r="10" class="wire" stroke-width="0.5"/>
+    
+    <!-- Prime meridian + equator (thicker) -->
+    <path d="M0 -10 C 6 -5, 6 5, 0 10" class="wire" stroke-width="0.5" opacity="0.7"/>
+    <path d="M0 -10 C -6 -5, -6 5, 0 10" class="wire" stroke-width="0.5" opacity="0.7"/>
+    <line x1="-10" y1="0" x2="10" y2="0" class="wire" stroke-width="0.5" opacity="0.7"/>
+    
+    <!-- Additional lat/lon lines -->
+    <path d="M-7 -7 Q 0 -10 7 -7" class="wire" stroke-width="0.35" opacity="0.5" fill="none"/>
+    <path d="M-7 7 Q 0 10 7 7" class="wire" stroke-width="0.35" opacity="0.5" fill="none"/>
+    <path d="M-9 -4 Q 0 -6 9 -4" class="wire" stroke-width="0.3" opacity="0.4" fill="none"/>
+    <path d="M-9 4 Q 0 6 9 4" class="wire" stroke-width="0.3" opacity="0.4" fill="none"/>
+    <line x1="-8" y1="-3" x2="8" y2="-3" class="wire" stroke-width="0.3" opacity="0.4"/>
+    <line x1="-8" y1="3" x2="8" y2="3" class="wire" stroke-width="0.3" opacity="0.4"/>
+
+    <!-- Simplified continent shapes (geometric, not organic) -->
+    <!-- North America + Europe / Asia block -->
+    <path d="M-2 -8 L 1 -7 L 3 -5 L 2 -3 L 0 -2 L -2 -3 L -3 -5 Z" 
+          class="wire" stroke-width="0.4" opacity="0.5" fill="none"/>
+    <!-- South America / Africa block -->
+    <path d="M-1 2 L 2 3 L 3 6 L 1 8 L -1 7 L -2 5 Z" 
+          class="wire" stroke-width="0.4" opacity="0.5" fill="none"/>
+    <!-- Australia / Pacific block -->
+    <path d="M5 -2 L 7 -1 L 8 1 L 6 2 L 4 1 Z" 
+          class="wire" stroke-width="0.4" opacity="0.5" fill="none"/>
+
+    <!-- Network nodes on globe -->
+    <circle cx="-6" cy="-3" r="0.4" class="node" opacity="0.6"/>
+    <circle cx="4" cy="-2" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="2" cy="4" r="0.4" class="node" opacity="0.6"/>
+    <circle cx="-2" cy="5" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="7" cy="1" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="-8" cy="2" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="0" cy="-5" r="0.3" class="node" opacity="0.4"/>
+    <circle cx="5" cy="-4" r="0.3" class="node" opacity="0.4"/>
+
+    <!-- Connection lines between nodes -->
+    <g class="wire" stroke-width="0.3" opacity="0.3">
+      <line x1="-6" y1="-3" x2="0" y2="-5"/>
+      <line x1="4" y1="-2" x2="7" y2="1"/>
+      <line x1="2" y1="4" x2="-2" y2="5"/>
+    </g>
+
+    <!-- Center hub -->
+    <circle cx="0" cy="0" r="0.5" class="node" opacity="0.8"/>
+  </g>
+
+  <text x="40" y="40" class="text">BLOCKCHAIN EXPLORER</text>
+  <text x="40" y="52" class="text">XDC NETWORK</text>
+  <text x="600" y="465" class="text">OPENSCAN AI</text>
+</svg>

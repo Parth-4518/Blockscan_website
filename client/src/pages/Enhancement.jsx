@@ -157,7 +157,7 @@ function Enhancement() {
               </ul>
             </div>
             <div className="comparison-arrow">
-              <ArrowRight size={40} className="text-[#DFFF00]" />
+              <ArrowRight size={40} className="text-[#2BF0FF]" />
             </div>
             <div className="comparison-card comparison-card--after">
               <h3 className="comparison-card__label comparison-card__label--after">After</h3>
@@ -183,7 +183,7 @@ function Enhancement() {
           <div className="tech-grid">
             {techStack.map((tech, index) => (
               <div key={index} className="tech-card">
-                <tech.icon size={32} className="text-[#DFFF00] mb-3" />
+                <tech.icon size={32} className="text-[#2BF0FF] mb-3" />
                 <h3 className="tech-card__title">{tech.title}</h3>
                 <p className="tech-card__desc">{tech.desc}</p>
               </div>
@@ -232,7 +232,7 @@ function Enhancement() {
       <section className="enhancement-cta">
         <div className="container">
           <div className="enhancement-cta__card">
-            <Wrench size={48} className="text-[#DFFF00] mb-4" />
+            <Wrench size={48} className="text-[#2BF0FF] mb-4" />
             <h2 className="enhancement-cta__title">Ready to Enhance Your Blockchain Solution?</h2>
             <p className="enhancement-cta__subtitle">
               Get started with Blockscan and unlock the full potential of your blockchain infrastructure.
