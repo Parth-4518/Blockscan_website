@@ -1,40 +1,103 @@
-import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css';
+import { useState, useEffect } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
+import './Navbar.css'
 
-function Navbar() {
-  const location = useLocation();
-  
+function Navbar({ visible = true }) {
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [shouldShow, setShouldShow] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const y = window.scrollY
+      setScrolled(y > 20)
+      if (y > 80) {
+        setShouldShow(true)
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    if (!visible) {
+      setShouldShow(false)
+      return
+    }
+    const timer = setTimeout(() => {
+      setShouldShow(true)
+    }, 2500)
+    return () => clearTimeout(timer)
+  }, [visible])
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false)
+  }, [location])
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(prev => !prev)
+  }
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false)
+  }
+
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/blogs', label: 'Blogs' },
-    { path: '/careers', label: 'Careers' },
-    { path: '/engagement', label: 'Engagement' },
-    { path: '/contact', label: 'Contact' },
-  ];
+    { to: '/', label: 'Home', end: true },
+    { to: '/about', label: 'About' },
+    { to: '/services', label: 'Services' },
+    { to: '/team', label: 'Team' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/blogs', label: 'Blogs' },
+    { to: '/careers', label: 'Careers' },
+    { to: '/contact', label: 'Contact' },
+    { to: '/engagement', label: 'Engagement' },
+    { to: '/enhancement', label: 'Enhancement' },
+  ]
+
+  const isVisible = visible && shouldShow
 
   return (
-    <nav className="navbar">
-      <div className="navbar__container">
-        <Link to="/" className="navbar__logo">
-          BLOCK<span>SCAN</span>
-        </Link>
-        
-        <ul className="navbar__links">
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''} ${isVisible ? 'navbar-visible' : ''}`}>
+      <div className="navbar-container">
+        <NavLink to="/" className="navbar-brand" onClick={closeMobileMenu}>
+          <span className="navbar-brand-text">OpenScan.AI</span>
+        </NavLink>
+
+        <div className={`navbar-links ${mobileMenuOpen ? 'navbar-links-open' : ''}`}>
           {navLinks.map((link) => (
-            <li key={link.path}>
-              <Link 
-                to={link.path}
-                className={`navbar__link ${location.pathname === link.path ? 'active' : ''}`}
-              >
-                {link.label}
-              </Link>
-            </li>
+            <NavLink
+              key={link.to}
+              to={link.to}
+              end={link.end}
+              className={({ isActive }) =>
+                `navbar-link ${isActive ? 'navbar-link-active' : ''}`
+              }
+              onClick={closeMobileMenu}
+            >
+              <span className="navbar-link-text">{link.label}</span>
+              <span className="navbar-link-underline" />
+            </NavLink>
           ))}
-        </ul>
+        </div>
+
+        <button
+          className="navbar-mobile-toggle"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
+          aria-expanded={mobileMenuOpen}
+        >
+          <span className={`navbar-hamburger ${mobileMenuOpen ? 'navbar-hamburger-open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
       </div>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
