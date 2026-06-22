@@ -1,12 +1,21 @@
-const express = require("express");
+import express from "express";
+import {
+  createContact,
+  getContacts
+} from "../controllers/contactController.js";
 
 const router = express.Router();
 
-router.post("/", (req, res) => {
-  res.json({
-    success: true,
-    message: "Contact form received"
-  });
-});
+/**
+ * @route   POST /api/contact
+ * @desc    Create a new contact form entry
+ */
+router.post("/", createContact);
 
-module.exports = router;
+/**
+ * @route   GET /api/contact
+ * @desc    Get all contact form entries
+ */
+router.get("/", getContacts);
+
+export default router;

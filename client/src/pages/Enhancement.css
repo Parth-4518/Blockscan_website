@@ -1,0 +1,304 @@
+.enhancement-page {
+  background-color: #0A0A0A;
+  min-height: 100vh;
+}
+
+/* Hero */
+.enhancement-hero {
+  position: relative;
+  padding: 120px 0 80px;
+  overflow: hidden;
+}
+
+.enhancement-hero__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(223, 255, 0, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 50%, rgba(223, 255, 0, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.enhancement-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.enhancement-hero__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 56px;
+  color: #F5F5F5;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+.enhancement-hero__subtitle {
+  font-size: 18px;
+  color: #A3A3A3;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.enhancement-hero__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #DFFF00;
+  color: #0A0A0A;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(223, 255, 0, 0.2);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #F5F5F5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Sections */
+.enhancement-section {
+  padding: 60px 0;
+}
+
+.enhancement-section .section-header {
+  margin-bottom: 40px;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Comparison */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.comparison-card {
+  background-color: #1A1A1A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.comparison-card--before {
+  border-left: 4px solid #ef4444;
+}
+
+.comparison-card--after {
+  border-left: 4px solid #DFFF00;
+}
+
+.comparison-card__label {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 24px;
+  color: #F5F5F5;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+
+.comparison-card__label--after {
+  color: #DFFF00;
+}
+
+.comparison-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comparison-card__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #A3A3A3;
+  font-size: 14px;
+}
+
+.comparison-card__list--after li {
+  color: #F5F5F5;
+}
+
+.comparison-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tech Stack */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.tech-card {
+  background-color: #1A1A1A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.tech-card__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 18px;
+  color: #F5F5F5;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.tech-card__desc {
+  font-size: 13px;
+  color: #A3A3A3;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Process */
+.process-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* CTA Section */
+.enhancement-cta {
+  padding: 60px 0 80px;
+}
+
+.enhancement-cta__card {
+  background-color: #1A1A1A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.enhancement-cta__title {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 32px;
+  color: #F5F5F5;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.enhancement-cta__subtitle {
+  font-size: 16px;
+  color: #A3A3A3;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-arrow {
+    transform: rotate(90deg);
+    padding: 16px 0;
+  }
+
+  .enhancement-hero__title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .enhancement-hero {
+    padding: 80px 0 60px;
+  }
+
+  .enhancement-hero__title {
+    font-size: 32px;
+  }
+
+  .enhancement-hero__subtitle {
+    font-size: 16px;
+  }
+
+  .features-grid,
+  .tech-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enhancement-cta__card {
+    padding: 32px 24px;
+  }
+
+  .enhancement-cta__title {
+    font-size: 24px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
