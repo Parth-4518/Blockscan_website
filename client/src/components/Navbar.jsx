@@ -16,7 +16,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar__container">
         <Link to="/" className="navbar__logo">
-          BLOCK<span>SCAN</span>
+          OPEN<span>SCAN.AI</span>
         </Link>
         
         <ul className="navbar__links">
