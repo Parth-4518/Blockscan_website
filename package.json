@@ -7,6 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "start": "cd server && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,5 +31,8 @@
     "express": "^5.2.1",
     "express-validator": "^7.3.2",
     "mongoose": "^9.7.1"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
   }
 }
