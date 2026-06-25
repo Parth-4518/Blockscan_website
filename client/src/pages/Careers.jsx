@@ -213,11 +213,11 @@ function Careers() {
             <Mail size={48} className="text-[#DFFF00] mb-4" />
             <h2 className="careers-cta__title">Don't see a suitable role?</h2>
             <p className="careers-cta__subtitle">
-              Send us your profile. We are always looking for exceptional talent.
+              We are always looking for exceptional talent. Reach out and tell us why you would be a great fit.
             </p>
-            <button className="btn btn-primary">
-              Submit Resume <ArrowRight size={18} />
-            </button>
+            <Link to="/contact" className="btn btn-primary">
+              Get in Touch <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </section>
