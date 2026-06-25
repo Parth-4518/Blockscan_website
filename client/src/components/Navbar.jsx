@@ -54,7 +54,6 @@ function Navbar({ visible = true }) {
     { to: '/careers', label: 'Careers' },
     { to: '/contact', label: 'Contact' },
     { to: '/engagement', label: 'Engagement' },
-    { to: '/enhancement', label: 'Enhancement' },
   ]
 
   const isVisible = visible && shouldShow

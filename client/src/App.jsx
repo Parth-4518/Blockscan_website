@@ -14,7 +14,6 @@ import Blogs from './pages/Blogs'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
 import Engagement from './pages/Engagement'
-import Enhancement from './pages/Enhancement'
 import NotFound from './pages/NotFound'
 import './App.css'
 
@@ -51,7 +50,6 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/engagement" element={<Engagement />} />
-            <Route path="/enhancement" element={<Enhancement />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </PageTransition>
