@@ -29,9 +29,7 @@ function BlogCard({ blog }) {
 
       {/* Content area — 80% */}
       <div className="intel-card__content">
-        <h3 className="intel-card__title">
-          <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>
-        </h3>
+        <h3 className="intel-card__title">{blog.title}</h3>
         <p className="intel-card__excerpt">{blog.excerpt}</p>
       </div>
 
