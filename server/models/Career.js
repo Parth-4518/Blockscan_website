@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const contactSchema = new mongoose.Schema(
+const careerSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -13,13 +13,20 @@ const contactSchema = new mongoose.Schema(
       trim: true,
       lowercase: true,
     },
-    subject: {
+    phone: {
       type: String,
       trim: true,
     },
+    position: {
+      type: String,
+      required: [true, "Position is required"],
+      trim: true,
+    },
+    resume: {
+      type: String,
+    },
     message: {
       type: String,
-      required: [true, "Message is required"],
       trim: true,
     },
   },
@@ -28,6 +35,6 @@ const contactSchema = new mongoose.Schema(
   }
 );
 
-const Contact = mongoose.model("Contact", contactSchema);
+const Career = mongoose.model("Career", careerSchema);
 
-export default Contact;
+export default Career;

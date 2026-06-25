@@ -78,13 +78,18 @@ const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
   try {
-    await connectDB();
+    // Skip DB connection if MongoDB is not available
+    try {
+      await connectDB();
+    } catch (dbError) {
+      console.warn("MongoDB not available, starting without database:", dbError.message);
+    }
 
     app.listen(PORT, () => {
       console.log(`Backend running on port ${PORT}`);
     });
   } catch (error) {
-    console.error("Database connection failed:", error);
+    console.error("Server startup failed:", error);
     process.exit(1);
   }
 };
