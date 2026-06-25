@@ -55,9 +55,7 @@ function BlogCard({ blog }) {
         <span className="intel-card__read-time">{blog.readTime}</span>
       </div>
 
-      <Link to={`/blogs/${blog.id}`} className="intel-card__cta">
-        READ MORE <span className="intel-card__cta-arrow">→</span>
-      </Link>
+      {/* READ MORE removed - card title is now the primary link */}
     </article>
   );
 }
